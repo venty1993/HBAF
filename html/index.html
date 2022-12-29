@@ -5,52 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HBAF</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <header id="hbaf-header">
         
-        <nav class="header-nav">
+        <div class="header-wrapper">
             
             <h1 class="header-logo">
                 <span class="hide-text">
                     HBAF
                 </span>
                 <a href="#" class="unit-link">
-                    <figure>
-                        <img src="../HBAFimg/logo_01.png" alt="HBAF로고이미지">
-                    </figure>
                 </a> 
             </h1>
             
             
-            <div class="menu-tittle-wrapper">
+            <nav class="menu-tittle-wrapper">
 
                 <ul class="menu-wrapper">
                     <li class="menu">
                         <a href="#">
                             신상WEEK혜택
                         </a>
+                        <ul class="under-menu">
+                            <li>
+                                <a href="#">
+                                    진행중인 이벤트
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    신상품
+                                </a>
+                            </li>
+                        </ul>
                     </li>
-                    <ul class="under-menu">
-                        <li>
-                            <a href="#">
-                                진행중인 이벤트
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                신상품
-                            </a>
-                        </li>
-                    </ul>
-                </ul>
-            
-                <ul class="menu-wrapper">
+                
                     <li class="menu">
                          <a href="#">
                              패키지 세트상품
-                            </a>
-                        </li>
+                        </a>
                         <ul class="under-menu">
                             <li>
                                 <a href="#">
@@ -68,72 +64,70 @@
                                 </a>
                             </li>
                         </ul>
-                    </ul>    
-
-                    <ul class="menu-wrapper">
-                        <li class="menu">
+                    </li>
+               
+                    <li class="menu">
                         <a href="#">
                             용량별 HBAF
                         </a>
+                         <ul class="under-menu">
+                             <li>
+                                 <a href="#">
+                                     대용량 패키지
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                                     중용량 패키지
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="#">
+                                     소용량 패키지
+                                 </a>
+                             </li>
+                         </ul>
                     </li>
-                    <ul class="under-menu">
-                        <li>
-                            <a href="#">
-                                대용량 패키지
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                중용량 패키지
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                소용량 패키지
-                            </a>
-                        </li>
-                    </ul>
-                 </ul>
 
-                <ul class="menu-wrapper">
                     <li class="menu">
                         <a href="#">
                             메뉴
                         </a>
-                    </li>
-                    <ul class="under-menu">
-                        <li>
-                            <a href="#">
-                                아몬드
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                땅콩
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                병아리콩
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                먼투썬
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                견과류
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                김스낵
-                            </a>
-                    </li>
+                        <ul class="under-menu">
+                            <li>
+                                <a href="#">
+                                    아몬드
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    땅콩
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    병아리콩
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    먼투썬
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    견과류
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    김스낵
+                                </a>
+                            </li>
+                        </ul>
+                    </li>     
                 </ul>
-            </div>
+            </nav>
             
             <ul class="alert-and-navershoping">
                <li>
@@ -151,13 +145,11 @@
             
             <div class="mobile-hmaburger">
             </div>
-        </nav>
+        </div>
     </header>
 
     <section id="video-place">
-        <video src="">
-            <!-- 유튜브 앞에 ss 붙혀서 다운로드 
-            object fit-->
+        <video src="../HBAFimg/Unlimited HBAF_포스터편_30”.mp4" autoplay muted loop>
         </video>
         <p class="header-letter">
             Healthy But Awesome Flavors
@@ -166,41 +158,51 @@
 
     <section id="explane-hbaf">
         <div class="explane-honeybee">
-            <figure>
+            <figure class="explane-honeybee-firstimg">
                 <img src="../HBAFimg/swinghoneybee-body.png" alt="손을 흔들고 있는 허니버터아몬드 몸통부분 사진">
             </figure>
-            <figure>
+            <figure class="explane-honeybee-lastimg">
                 <img src="../HBAFimg/swinghoneybee-hands.png" alt="손을 흔들고 있는 허니버터아몬드 팔부분">
             </figure>
         </div>
 
         <div class="explane-box">
-            <div class="explane-logo-letter-wrapper">
-                <figure>
+            <div class="explane-text-wrapper">
+
+                <div class="explane-logo-letter-wrapper">
+                    <figure>
                     <img src="../HBAFimg/logo_01.png" alt="HBAF아몬드 로고">
-                </figure>
-                <h3>Healthy But Awesome Favors</h3>
-            </div>
-            <div class="explane-letter-wrapper">
-                <p>
-                    HBAF는 ‘Healthy But Awesome Favors’ 의 줄임말로 <br>
-                    ‘건강하지만 맛있는 간식’을 지향한답니다! <br>
-                    지금부터 허니버터 아몬드와 함께 <br>
-                    HBAF가 선보이는 멋진 소식들을 살펴보세요!
-                </p>
-            </div>
-            
-            <a href="#" class="more-view">
-                더 알아보기
-            </a>
-           
-        </div>
+                    </figure>
+                    <h3>Healthy But Awesome Favors</h3>
+                </div>
+                <div class="explane-letter-wrapper">
+                    <p>
+                        HBAF는 ‘Healthy But Awesome Favors’ 의 줄임말로 
+                    </p>
+                    <p>
+                        ‘건강하지만 맛있는 간식’을 지향한답니다! 
+                    </p>
+                    <p>
+                        지금부터 허니버터 아몬드와 함께 
+                    </p>
+                    <p>
+                         HBAF가 선보이는 멋진 소식들을 살펴보세요!
+                    </p>
+                </div>
+                
+                <div class="more-view">
+                    <a href="#" class="unit-link">
+                        더 알아보기
+                    </a>
+                </div>
+           </div>       
+       </div>
 
         <div class="fly-honeybee">
-            <figure>
+            <figure class="fly-honeybee-body about-hbaf-fly-bee">
                 <img src="../HBAFimg/flyhoney-buter-body.png" alt="날고있는 허니버터 아몬드 몸통 ">
             </figure>
-            <figure>
+            <figure class="fly-honeybee-wings">
                 <img src="../HBAFimg/honey-butter-wings.png" alt="날고있는 허니버터아몬드 날개부분">
             </figure>
         </div>
@@ -214,74 +216,90 @@
 
     <section id="original-almond">
         <h2>ORIGINAL</h2>
-        <div class="original-wrapper">
-            <p>
-                원조는 다릅니다. 판매량이 말해줍니다. 언제 어디서나 간편하게 K-아몬드! <br> 
-                재구매에는 이유가 있습니다
-            </p>
-        </div>
+        <div class="original-almond-linebackground">
+            <div class="originalimg-text-wrapper">
 
-        <div class="honeybutter-almond-wrapper">
-            <figure>
-                <img src="../HBAFimg/honeybutter-alomond.png" alt="허니버터아몬드 봉지과자">
-            </figure>
-
-            <div class="honey-butter-explane-area">
-                <div class="line simple">
-                    <p class="keyword">
-                        SIMPLE
-                    </p>
-                    <p class="honeybutter-almond-explane">
-                        언제 어디서나 심플한 지퍼백! 먹고 싶은 만큼 건강하게 
+                <div class="original-wrapper">
+                    <p>
+                        원조는 다릅니다. 판매량이 말해줍니다. 언제 어디서나 간편하게 K-아몬드! <br> 
+                        재구매에는 이유가 있습니다
                     </p>
                 </div>
             </div>
 
-            <div class="honey-butter-explane-area">
-                <div class="line flavors">
-                    <p class="keyword">
-                        FLAVORS
-                    </p>
-                    <p class="honeybutter-almond-explane">
-                        내 입에 딱 맛는 맛들로 구성! 놀라운                     </p>
+            <div class="honeybutter-almond-wrapper">
+                <figure>
+                    <img src="../HBAFimg/honeybutter-alomond.png" alt="허니버터아몬드 봉지과자">
+                </figure>
+
+                <div class="line-text-wrapper">
+
+                    <div class="honey-butter-explane-area">
+                        <div class="line-text">
+                            <div class="line simple">
+                            </div>
+                            <p class="keyword">
+                                SIMPLE
+                            </p>
+                        </div>
+                        <p class="honeybutter-almond-explane">
+                            언제 어디서나 심플한 지퍼백! 먹고 싶은 만큼 건강하게 
+                        </p>
+                    </div>
+                    
+                    <div class="honey-butter-explane-area">
+                        <div class="line-text">
+                            <div class="line flavors">
+                            </div>
+                            <p class="keyword">
+                                FLAVORS
+                            </p>
+                        </div>
+                        <p class="honeybutter-almond-explane">
+                            내 입에 딱 맛는 맛들로 구성! 놀라운                    
+                        </p>
+                     </div>
+                
+                    <div class="honey-butter-explane-area">
+                        <div class="line-text">
+                            <div class="line healthy">
+                            </div>
+                            <p class="keyword">
+                                HEALTHY
+                            </p>
+                        </div>
+                        <p class="honeybutter-almond-explane">
+                            건강한 아몬드로 내 몸에 딱 좋은 간식!                     
+                        </p>
+                    </div>
+                    <div class="ori-and-moreview-wrapper">
+                        <p>
+                            ORIGINAL
+                            <!-- 백그라운드로 넣기 -->
+                        </p>
+        
+                        <div class="more-view">
+                            <a href="#" class="unit-link">
+                                자세히 보기
+                            </a>
+                        </div>
+                            <!-- 자세히 보기 자리 이동 -->
+                        </div>
                 </div>
             </div>
-
-            <div class="honey-butter-explane-area">
-                <div class="line healthy">
-                    <p class="keyword">
-                        HEALTHY
-                    </p>
-                    <p class="honeybutter-almond-explane">
-                        건강한 아몬드로 내 몸에 딱 좋은 간식!                     
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="ori-and-moreview-wrapper">
-            <p>
-                ORIGINAL
-                <!-- 백그라운드로 넣기 -->
-            </p>
             
-            <a href="#" class="more-view">
-                자세히 보기
-            </a>
-            <!-- 자세히 보기 자리 이동 -->
-           
-        </div>
 
-        <div class="fly-honeybee">
-            <figure>
-                <img src="../HBAFimg/flyhoney-buter-body.png" alt="날고있는 허니버터 아몬드 몸통 ">
-            </figure>
-            <figure>
-                <img src="../HBAFimg/honey-butter-wings.png" alt="날고있는 허니버터아몬드 날개부분">
-            </figure>
+                <div class="fly-honeybee">
+                    <figure>
+                    <img src="../HBAFimg/flyhoney-buter-body.png" alt="날고있는 허니버터 아몬드 몸통 ">
+                </figure>
+                <figure>
+                    <img src="../HBAFimg/honey-butter-wings.png" alt="날고있는 허니버터아몬드 날개부분">
+                </figure>
+            </div>
         </div>
     </section>
-
+    
     <section id="recommend-area">
         <div class="recommend-tittle">
             <h3>Recommend</h3>
@@ -604,7 +622,44 @@
         </div>
     </section>
     
+    <footer>
 
+        <div class="footer-wrapper">
+            <!-- 로고 백그라운드로 넣어줘야함 -->
+            <h1>
+                <span class="hide-text">HBAF</span>
+                <a href="#">
+                </a>
+            </h1>
+
+            <div class="footer-information-wrwapper">
+                <div class="information-text">
+                    <p>HBAF(주)</p>
+                    <p>사업자등록번호 220-81-62517  통신판매업신고번호2006-경기성남-0692호</p>
+                    <p>대표이사 최수연 경기도 성남시 분당구 정자일로 95, </p>
+                    <p>전화 1588-3819  사업자등록정보 확인 이메일 helpcustomer@naver.com</p>
+                    <p>Copyright  ©HBAF All rights reserved.</p>
+                </div>
+                <div class="alert-area">
+                    <a href="#">
+                        공지사항
+                    </a>
+                    <a href="#">
+                        이벤트
+                    </a>
+                    <a href="#">
+                        매장안내
+                    </a>
+                    <a href="#">
+                        고객센터
+                    </a>
+                    <a href="#">
+                        1:1문의 바로가기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

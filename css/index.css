@@ -1,0 +1,371 @@
+ :root{
+    /* color */
+    --main-white-color: #fff;
+    --main-brown-color: #3e2612;
+    --main-orange-color: #ffbc03;
+    --main-yello-color: #ffda00;
+    --main-yello-color2: #fcd364;
+    --main-blue-color: #83c2ef;
+    --main-green-color: #74bd4a;
+    --carrot-color : #ec5d3f;
+    --blue-color: #0d4daf;
+    --font-black:#222;
+    /* footer-color */
+    --footer-color : #353535;
+    --footer-font-color: #bdbdbd;
+    /* size */
+    --container-size: 1282px
+ }
+
+
+.hide-text {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+}
+
+#hbaf-header{
+    padding: 25px;
+}
+
+.header-logo{
+    width: 90px;
+    height: 40px;
+    background-image: url(../HBAFimg/logo_01.png);
+    background-size: cover;
+    position: absolute;
+    left: 0;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 45px;
+    box-sizing: border-box;
+    position: relative;
+    transition: 1s;
+}
+
+.header-active{
+    height: 280px;
+}
+
+.menu-tittle-wrapper{
+    padding-top: 10px;
+}
+
+.menu-wrapper{
+    display: flex;
+    gap: 45px;
+}
+
+.menu{
+    position: relative;
+    width: 150px;
+}
+
+.menu > a {
+    position: absolute;
+}
+
+.under-menu{
+    display: none;
+}
+
+.menu-wrapper a {
+    /* color: var(--main-white-color); */
+    font-size: 20px;
+    
+}
+
+.under-menu li>a {
+    font-size: 13px;
+}
+
+.under-menu li{
+    margin-bottom: 5px;
+    padding-top: 14px;
+}
+
+.alert-and-navershoping{
+    font-size: 15px;
+    display: flex;
+    gap: 45px;
+    position: absolute;
+    right: 0;
+}
+
+.mobile-hmaburger{
+    display: none;
+}
+
+#video-place {
+    position: relative;
+}
+
+#video-place > video{
+    width: 100vw;
+}
+
+.header-letter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--main-white-color);
+    font-size: 70px;
+    font-weight: bold;
+    display: block;
+}
+
+#explane-hbaf{
+    width: 100vw;
+    background-color: var(--main-orange-color);
+    display: flex;
+    justify-content: center;
+    padding-top: 162px;
+}
+
+.explane-honeybee{
+    display: block;
+    position: relative;
+    width: 700px;
+}
+
+/* explane-honeybee>img에 width100% 주는 대신 허니버터 전체 몸사용/ 팔 분리해줘야함 */
+
+.explane-honeybee-lastimg {
+    position: absolute;
+    rotate: 6deg;
+    right: 0;
+    top: 50%;
+    transform: translate(53%, -50%);
+    z-index: 1;
+}
+
+.explane-box{
+    width: 849px;
+    height: 504px;
+    background-color: var(--main-white-color);
+    border-radius: 10px;
+    border: 3px solid var(--main-brown-color);
+    rotate: -4deg;
+}
+
+.explane-text-wrapper{
+    padding-top: 50px;
+}
+
+.explane-logo-letter-wrapper{
+    display: flex;
+    align-items: baseline;
+    gap: 45px;
+    justify-content: center;
+}
+
+.explane-logo-letter-wrapper img{
+    width: 171px;
+}
+
+.explane-logo-letter-wrapper h3{
+    color: var(--main-brown-color);
+    font-size: 20px;
+    position: relative;
+}
+
+.explane-logo-letter-wrapper h3::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 6px;
+    background-color: var(--main-yello-color2);
+    position: absolute;
+    bottom: 0;
+    opacity: 50%;
+}
+
+.explane-letter-wrapper{
+    padding-top: 64px;
+    padding-left: 64px;
+    padding-bottom: 32px;
+}
+
+.explane-letter-wrapper > p{
+    display: block;
+    font-size: 20px;
+    color: var(--main-brown-color);
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.explane-letter-wrapper > p::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-brown-color);
+    margin-top: 12px;
+    transform: translateX(-10%);
+}
+
+.more-view{
+    width: 100px;
+    background-color: var(--main-brown-color);
+    border-radius: 33px;
+    padding: 10px 10px;
+    margin: 0 auto;
+}
+
+.more-view > a {
+    color: var(--main-yello-color);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-hbaf-fly-bee{
+    transform: translate(-45%, -55%);
+    position: relative;
+}
+
+.fly-honeybee{
+    width: 300px;
+    height: 200px;
+    display: flex;
+}
+
+.fly-honeybee-wings{
+    transform: translateY(10%);
+    flex-basis: 30%;
+}
+
+.fly-honeybee-body{
+    flex-basis: 70%;
+}
+
+.small-honeybee{
+    width: 370px;
+    height: 390px;
+    rotate: 15deg;
+    transform: translate(-120%,80%);
+}
+
+#original-almond {
+    padding-top: 86px;
+}
+#original-almond > h2{
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--main-yello-color2);
+    max-width: var(--container-size);
+    margin: 0 auto;
+}
+
+.original-almond-linebackground{
+    background-color: var(--main-yello-color2);
+    margin-right: 320px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.originalimg-text-wrapper{
+    width: var(--container-size);
+    margin: 0 auto;
+}
+
+
+.original-wrapper > p {
+    font-size: 20px;
+    color: var(--main-brown-color);
+    line-height: 168%;
+}
+
+.original-wrapper{
+    padding-top: 30px;
+}
+
+
+.honeybutter-almond-wrapper {
+    display: flex;
+    align-items: center;
+    width: var(--container-size);
+    margin: 0 auto;
+}
+
+.honeybutter-almond-wrapper > figure{
+    padding-top: 30px;
+    padding-left: 80px;
+    width: 360px;
+}
+
+.honey-butter-explane-area{
+    padding-top: 45px;
+}
+
+.line-text-wrapper{
+    position: relative;
+}
+
+.line{
+    height: 2px;
+    background-color: #3e2612;
+    position: relative;
+    margin-right: 10px;
+}
+
+.simple{
+    width: 185px;
+}
+
+.flavors{
+    width: 280px;
+}
+
+.healthy{
+    width:360px
+}
+
+.line::after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--main-brown-color);
+    position: absolute;
+    right: 0;
+    transform: translate(0%, -50%);
+}
+
+.keyword{
+    font-size: 30px;
+    color: var(--main-brown-color);
+    font-weight: bold;
+}
+
+.honeybutter-almond-explane{
+    font-size: 20px;
+    color: var(--main-brown-colorhealthy);
+    padding-top: 16px;
+    position: absolute;
+    right: 0;
+    transform: translateX(25%);
+}
+
+.line-text{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
