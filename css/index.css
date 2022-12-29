@@ -38,6 +38,7 @@
     background-size: cover;
     position: absolute;
     left: 0;
+    top: 0;
 }
 
 .header-wrapper{
@@ -57,7 +58,7 @@
 }
 
 .menu-tittle-wrapper{
-    padding-top: 10px;
+    /* padding-top: 10px; */
 }
 
 .menu-wrapper{
@@ -81,11 +82,14 @@
 .menu-wrapper a {
     /* color: var(--main-white-color); */
     font-size: 20px;
-    
 }
 
 .under-menu li>a {
     font-size: 13px;
+}
+
+.under-menu li:nth-child(1){
+    padding-top: 42px;
 }
 
 .under-menu li{
@@ -99,6 +103,7 @@
     gap: 45px;
     position: absolute;
     right: 0;
+    top: 0;
 }
 
 .mobile-hmaburger{
@@ -130,6 +135,7 @@
     display: flex;
     justify-content: center;
     padding-top: 162px;
+    padding-left: 180px;
 }
 
 .explane-honeybee{
@@ -216,9 +222,13 @@
 
 .more-view{
     width: 100px;
+    height: 20px;
     background-color: var(--main-brown-color);
     border-radius: 33px;
     padding: 10px 10px;
+}
+
+.explane-text-wrapper .more-view{
     margin: 0 auto;
 }
 
@@ -241,7 +251,7 @@
 }
 
 .fly-honeybee-wings{
-    transform: translateY(10%);
+    transform: translate(-40% , 20%);
     flex-basis: 30%;
 }
 
@@ -258,20 +268,21 @@
 
 #original-almond {
     padding-top: 86px;
+    margin-right: 320px;
 }
 #original-almond > h2{
     font-size: 80px;
     font-weight: bold;
     color: var(--main-yello-color2);
-    max-width: var(--container-size);
+    width: var(--container-size);
     margin: 0 auto;
 }
 
 .original-almond-linebackground{
     background-color: var(--main-yello-color2);
-    margin-right: 320px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+    position: relative;
 }
 
 .originalimg-text-wrapper{
@@ -296,12 +307,13 @@
     align-items: center;
     width: var(--container-size);
     margin: 0 auto;
+    position: relative;
 }
 
 .honeybutter-almond-wrapper > figure{
     padding-top: 30px;
-    padding-left: 80px;
     width: 360px;
+    flex-grow: 0;
 }
 
 .honey-butter-explane-area{
@@ -309,7 +321,10 @@
 }
 
 .line-text-wrapper{
-    position: relative;
+    flex-grow: 1;
+    position: absolute;
+    left: 0;
+    transform: translateX(65%);
 }
 
 .line{
@@ -353,9 +368,7 @@
     font-size: 20px;
     color: var(--main-brown-colorhealthy);
     padding-top: 16px;
-    position: absolute;
-    right: 0;
-    transform: translateX(25%);
+    padding-left: 10%;
 }
 
 .line-text{
@@ -363,8 +376,103 @@
     align-items: center;
 }
 
+.original-fly-bee{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(25% , -50%);
+}
 
+.ori-and-moreview-wrapper{
+    padding-top: 64px;
+    padding-left: 10%;
+}
 
+.original-text{
+    color: var(--main-orange-color);
+    opacity: 40%;
+    font-size: 120px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(-5%, -10%);
+}
+
+#recommend-area{
+    width: var(--container-size);
+    padding-top: 128px;
+    margin: 0 auto;
+}
+
+.recommend-tittle{
+    margin: 0 auto;
+}
+
+.injermi-wrapper{
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.injermi-wrapper > h3{
+    font-size: 50px;
+    color: var(--main-brown-color);
+    font-weight: bold;
+    display: inline;
+}
+
+.injermi-wrapper figure {
+    overflow: hidden;
+    width: 180px;
+    height: 150px;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translate(0%, -45%);
+}
+
+.recommend-product{
+    background-color: var(--main-yello-color2);
+    width: 210px;
+    height: 56px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+.recommend-product > p{
+    text-align: center;
+    align-items: center;
+    color: var(--main-brown-color);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.recommend-container-wrppaer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recommend-container{
+    display: flex;
+    height: 300px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.recommend-text-area{
+    flex-basis: 70%;
+}
+
+.new-production{
+    background-color: var(--main-blue-color);
+}
+
+.recommend-container > figure{
+   flex-basis: 30%;
+   width: 200px;
+}
 
 
 
