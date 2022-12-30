@@ -586,7 +586,7 @@
 }
 
 #slide-banner-area{
-    padding-top: 64px;
+    padding: 64px 0px;
 }
 
 .event-area-wrapper{
@@ -637,5 +637,154 @@
     color: var(--footer-font-color);
 }
 
-.
+#choice-hbaf{
+    background-color: var(--main-green-color);
+}
 
+
+.choice-explane-text{
+    width: var(--container-size);
+    padding-top: 24px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+
+.choice-text{
+    font-size: 80px;
+    color: var(--main-white-color);
+    font-weight: bold;
+}
+
+.choice-explane-text-explane{
+    padding-top: 24px;
+    color: var(--main-white-color);
+    font-size: 20px;
+}
+
+.coice-contents{
+    display: flex;
+    padding-top: 70px;
+    gap: 130px;
+}
+
+.explane-character{
+    color: var(--main-yello-color2);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.explane-choice-character{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 155%;
+    color: var(--main-white-color);
+}
+
+.more{
+    font-size: 20px;
+    color: var(--main-brown-color);
+    font-weight: bold;
+    position: relative;
+    display: inline;
+}
+
+.more::after{
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-top: 2px solid var(--main-brown-color);
+    border-right: 2px solid var(--main-brown-color);
+    rotate: 45deg;
+    transform: translate(50%, -97%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.choice-left{
+    text-align: start;
+}
+.choice-right{
+    text-align: end;
+    justify-content: end;
+}
+
+.choice-chracter-area{
+    display: flex;
+    position: relative;
+}
+
+.small-bean{
+    transform: scaleX(-1);
+}
+
+.chracter-background{
+    width: 740px;
+    height: 280px;
+    background-size: cover;
+    background-image: url(../HBAFimg/KakaoTalk_20221228_153730042_13.png);
+}
+
+.choice-right .choice-chracter-area > figure{
+    position: absolute;
+    top: 0;
+    transform: translateY(-40%);
+}
+
+.choice-left .choice-chracter-area > figure{
+    position: absolute;
+    top: 0;
+    transform: translateY(-40%);
+    right: 0;
+}
+
+.choice-right .chracter-background{
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.choice-left .chracter-background{
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.almond{
+    width: 400px;
+}
+
+.three-chracter{
+    width: var(--container-size);
+    margin: 0 auto;
+    background-image: url(../HBAFimg/charachter-background.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.three-chracter figure{
+    width: 400px;
+    padding-bottom: 286px;
+}
+.three-chracter figure:nth-child(2){
+    width: 300px;
+    position: absolute;
+    top: 10%;
+    right: 50%;
+    transform: translate(53%, -19%);
+}
+
+.three-chracter figure:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-55%, 10%);
+}
+
+footer{
+    background-color: var(--footer-color);
+}
