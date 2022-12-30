@@ -2,6 +2,7 @@
     /* color */
     --main-white-color: #fff;
     --main-brown-color: #3e2612;
+    --brown-color: #704518;
     --main-orange-color: #ffbc03;
     --main-yello-color: #ffda00;
     --main-yello-color2: #fcd364;
@@ -28,7 +29,16 @@
 }
 
 #hbaf-header{
-    padding: 25px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    /* height: 290px; */
+    height: 65px;
+    transition: 1s;
+    background-color: var(--main-yello-color2);
+    overflow: hidden;
 }
 
 .header-logo{
@@ -37,29 +47,30 @@
     background-image: url(../HBAFimg/logo_01.png);
     background-size: cover;
     position: absolute;
-    left: 0;
+    left: 25px;
 }
 
 .header-wrapper{
+    padding: 20px;
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    overflow: hidden;
-    height: 45px;
-    box-sizing: border-box;
     position: relative;
     transition: 1s;
+    border-bottom: 3px solid var(--main-orange-color);
+    padding-bottom: 0px;
 }
 
 .header-active{
-    height: 280px;
+    height: 260px;
 }
 
 
 .menu-wrapper{
     display: flex;
     gap: 45px;
+    height: 45px;
+    position: relative;
 }
 
 .menu{
@@ -67,25 +78,19 @@
     width: 150px;
 }
 
-.menu > a {
-    position: absolute;
-}
-
-.under-menu{
-    display: none;
-}
-
-.menu-wrapper a {
-    /* color: var(--main-white-color); */
+.menu a {
+    color: var(--main-brown-color);
     font-size: 20px;
+    font-weight: 800;
 }
 
 .under-menu li>a {
     font-size: 13px;
+    color: var(--brown-color);
 }
 
 .under-menu li:nth-child(1){
-    padding-top: 42px;
+    padding-top: 40px;
 }
 
 .under-menu li{
@@ -98,7 +103,7 @@
     display: flex;
     gap: 45px;
     position: absolute;
-    right: 0;
+    right: 25px;
 }
 
 .mobile-hmaburger{
@@ -111,6 +116,7 @@
 
 #video-place > video{
     width: 100vw;
+    display: block;
 }
 
 .header-letter{
@@ -122,6 +128,19 @@
     font-size: 70px;
     font-weight: bold;
     display: block;
+}
+
+.navi-honey{
+    width: 220px;
+    position: absolute;
+    top: 90px;
+    left: 10%;
+}
+
+.navi-honeybee{
+    position: absolute;
+    right: 22%;
+    width: 130px;
 }
 
 #explane-hbaf{
@@ -139,7 +158,7 @@
     width: 700px;
 }
 
-/* explane-honeybee>img에 width100% 주는 대신 허니버터 전체 몸사용/ 팔 분리해줘야함 */
+
 
 .explane-honeybee-lastimg {
     position: absolute;
@@ -396,7 +415,7 @@
 
 #recommend-area{
     width: var(--container-size);
-    padding-top: 128px;
+    padding-top: 64px;
     margin: 0 auto;
 }
 
@@ -406,7 +425,6 @@
 
 .injermi-wrapper{
     position: relative;
-    height: 150px;
     display: flex;
     justify-content: center;
 }
@@ -422,10 +440,6 @@
     overflow: hidden;
     width: 180px;
     height: 150px;
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    transform: translate(0%, -45%);
 }
 
 .recommend-product{
@@ -453,8 +467,8 @@
     display: flex;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    padding: 20px;
     width: 630px;
+    align-items: center;
 }
 
 
@@ -469,12 +483,13 @@
 }
 
 .recommend-text-area{
-    flex-basis: 60%;
     color: var(--main-white-color);
+    width: 360px;
+    padding: 20px;
+    padding-right: 0px;
 }
 .hashtag{
-    font-size: 25px;
-    margin-top: 32px;
+    font-size: 22px;
     line-height: 150%;
 }
 
@@ -485,7 +500,7 @@
     padding-top: 22px;
 }
 .recommend-name{
-    /* line-height: 150%; */
+    line-height: 115%;
     margin-top: 32px;
     font-size: 40px;
 }
@@ -494,7 +509,7 @@
     margin-top: 32px;
     font-size: 20px;
     color: var(--main-brown-color);
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .adalt-production{
@@ -572,11 +587,11 @@
 
 #slide-banner-area{
     padding-top: 64px;
-    width: var(--container-size);
-    margin: 0 auto;
 }
 
 .event-area-wrapper{
+    margin: 0 auto;
+    width: var(--container-size);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -597,5 +612,30 @@
     gap: 22px;
 }
 
+.event-slidewrapper{
+    width: var(--container-size);
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 24px;
+}
 
+.contents > figure{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.event-text-wrapper{
+    padding: 10px;
+}
+
+.contents-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.event-explane-text{
+    font-size: 15px;
+    color: var(--footer-font-color);
+}
+
+.
 
