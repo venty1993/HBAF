@@ -38,7 +38,6 @@
     background-size: cover;
     position: absolute;
     left: 0;
-    top: 0;
 }
 
 .header-wrapper{
@@ -57,9 +56,6 @@
     height: 280px;
 }
 
-.menu-tittle-wrapper{
-    /* padding-top: 10px; */
-}
 
 .menu-wrapper{
     display: flex;
@@ -103,7 +99,6 @@
     gap: 45px;
     position: absolute;
     right: 0;
-    top: 0;
 }
 
 .mobile-hmaburger{
@@ -335,15 +330,15 @@
 }
 
 .simple{
-    width: 185px;
+    width: 40%;
 }
 
 .flavors{
-    width: 280px;
+    width: 60%;
 }
 
 .healthy{
-    width:360px
+    width:100%;
 }
 
 .line::after{
@@ -456,24 +451,151 @@
 
 .recommend-container{
     display: flex;
-    height: 300px;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    padding: 20px;
+    width: 630px;
 }
 
-.recommend-text-area{
-    flex-basis: 70%;
-}
 
 .new-production{
     background-color: var(--main-blue-color);
 }
 
 .recommend-container > figure{
-   flex-basis: 30%;
-   width: 200px;
+    flex-basis: 40%;
+    width: 200px;
+    overflow: hidden;
 }
 
+.recommend-text-area{
+    flex-basis: 60%;
+    color: var(--main-white-color);
+}
+.hashtag{
+    font-size: 25px;
+    margin-top: 32px;
+    line-height: 150%;
+}
+
+.recommend-line-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 22px;
+    padding-top: 22px;
+}
+.recommend-name{
+    /* line-height: 150%; */
+    margin-top: 32px;
+    font-size: 40px;
+}
+
+.goto-recommend{
+    margin-top: 32px;
+    font-size: 20px;
+    color: var(--main-brown-color);
+    font-weight: bold;
+}
+
+.adalt-production{
+    background-color: var(--main-orange-color);
+}
+
+.gift-production{
+    background-color: var(--main-yello-color2);
+}
+
+.kids-production{
+    background-color: var(--main-green-color);
+}
+
+#banner-container{
+    padding-top: 62px;
+    margin-top: 0 auto;
+    margin: 0 auto;
+}
+
+.banner-area{
+    background-color: var(--main-yello-color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.carrot-cake-almond{
+    margin-right: 40px;
+    width: 225px;
+    display: none;
+}
+
+.carrot-cake-bottom{
+    margin-right: 40px;
+    width: 225px;
+}
+
+.banner-left-text{
+    font-size: 35px;
+    color: var(--carrot-color);
+    font-weight: 800;
+}
+.banner-area p{
+    padding-top: 30px;
+}
+
+.banner-left-text p:nth-child(2){
+    color: var(--main-white-color);
+}
+
+.text-rigtt{
+    padding-left: 40px;
+}
+
+.text-medium{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.text-left{
+    padding-right: 40px;
+}
+
+.banner-right-text{
+    color: var(--main-white-color);
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.banner-right-text p:nth-child(2){
+    color: var(--carrot-color);
+}
+
+#slide-banner-area{
+    padding-top: 64px;
+    width: var(--container-size);
+    margin: 0 auto;
+}
+
+.event-area-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.event-area-wrapper > h2{
+    font-size: 80px;
+    color: var(--blue-color);
+    font-weight: 800;
+}
+
+.brown{
+    color: var(--main-brown-color);
+}
+
+.contents-wrapper{
+    display: flex;
+    gap: 22px;
+}
 
 
 
