@@ -28,6 +28,15 @@
     width: 1px;
 }
 
+.unit-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
 #hbaf-header{
     position: fixed;
     top: 0;
@@ -114,7 +123,7 @@
     width: 100%;
     background-color: var(--main-white-color);
     opacity: 50%;
-
+    position: relative;
 }
 
 .mobile-hmaburger{
@@ -213,7 +222,7 @@
     justify-content: center;
 }
 
-.explane-logo-letter-wrapper img{
+.explane-logo-letter-wrapper figure{
     width: 171px;
 }
 
@@ -263,6 +272,7 @@
     background-color: var(--main-brown-color);
     border-radius: 33px;
     padding: 10px 10px;
+    position: relative;
 }
 
 .explane-text-wrapper .more-view{
@@ -274,6 +284,7 @@
     font-size: 15px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .about-hbaf-fly-bee{
@@ -312,7 +323,7 @@
 
 #original-almond {
     padding-top: 64px;
-    margin-right: 320px;
+    margin-right: 32px;
 }
 #original-almond > h2{
     font-size: 80px;
@@ -326,6 +337,7 @@
     background-color: var(--main-yello-color2);
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+    max-width: 1600px;
     position: relative;
 }
 
@@ -343,13 +355,16 @@
     display: flex;
     align-items: center;
     width: var(--container-size);
-    margin: 0 auto;
     position: relative;
+    width: 100%;
+    max-width: var(--container-size);
+    justify-content: center;
 }
 
 .honeybutter-almond-wrapper > figure{
     padding-top: 30px;
-    width: 360px;
+    max-width: 360px;
+    flex-basis: 40%;
 }
 
 .honey-butter-explane-area{
@@ -358,9 +373,9 @@
 
 .line-text-wrapper{
     flex-grow: 1;
-    position: absolute;
-    left: 0;
-    transform: translateX(65%);
+    flex-basis: 60%;
+    max-width: 640px;
+    transform: translateX(-5%);
 }
 
 .line{
@@ -484,6 +499,8 @@
 .recommend-container-wrppaer{
     display: flex;
     flex-wrap: wrap;
+    padding: 0px 32px;
+    position: relative;
 }
 
 .recommend-container{
@@ -493,6 +510,7 @@
     width: 100%;
     align-items: center;
     box-shadow: -5px 6px 10px 5px rgba(0, 0, 0 ,25%);
+    overflow: hidden;
 }
 
 
@@ -668,8 +686,8 @@
 
 
 .choice-explane-text{
-    width: var(--container-size);
-    padding-top: 24px;
+    padding: 24px 32px;
+    max-width: var(--container-size);
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -692,6 +710,7 @@
     padding-top: 24px;
     color: var(--main-white-color);
     font-size: 20px;
+    text-align: center;
 }
 
 .coice-contents{
@@ -765,16 +784,17 @@
     height: 100%;
     background-size: cover;
     background-image: url(../HBAFimg/KakaoTalk_20221228_153730042_13.png);
-    /* align-items: baseline; */
+    padding-bottom: 16px;
 }
 
 .chrancter-name{
     display: flex;
     justify-content: center;
-    align-items: baseline;
     font-size: 60px;
     font-weight: 800;
     color: var(--main-brown-color);
+    height: 100%;
+    align-items: flex-end;
 }
 
 /* .ddanghong{
@@ -813,19 +833,34 @@
 }
 
 .three-chracter{
-    width: var(--container-size);
+    width: 100%;
+    height: 800px;
+}
+
+.three-chracter{
+    max-width: var(--container-size);
     margin: 0 auto;
     background-image: url(../HBAFimg/charachter-background.png);
     background-repeat: no-repeat;
     position: relative;
+    background-size: contain;
+    background-position: center;
 }
 
 .three-chracter figure{
-    width: 400px;
+    max-width: 400px;
     padding-bottom: 286px;
 }
+
+.three-chracter figure:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(30%, 23%);
+}
+
 .three-chracter figure:nth-child(2){
-    width: 280px;
+    max-width: 280px;
     position: absolute;
     top: 16%;
     right: 52%;
@@ -846,7 +881,7 @@ footer{
 }
 
 .footer-wrapper {
-    width: var(--container-size);
+    max-width: var(--container-size);
     margin: 0 auto;
 }
 
@@ -884,6 +919,136 @@ footer{
 }
 
 
-@media screen and (max-width:1024px) {
-   
+@media screen and (max-width:1000px) {
+    
+    .explane-honeybee{
+        width: 550px;
+    }
+
+    .explane-honeybee-lastimg{
+        transform: translate(-3%, -165px);
+    }
+
+    .over-flow-hiden {
+        padding-left: 210px;
+    }
+
+    .small-honeybee{
+        transform: translate(40% , 27%);
+    }
+
+
+}
+
+@media screen and (max-width:834px) {
+
+    .over-flow-hiden{
+        padding-left: 55px;
+    }
+
+    .explane-logo-letter-wrapper > figure{
+        width: 128xp;
+    }
+
+    .explane-honeybee-wrapper{
+        transform: translate(-55%, 56%);
+    }
+
+    .explane-honeybee{
+        width: 440px;
+    }
+
+    .explane-honeybee-lastimg{
+        transform: translate(16% , -77%);
+    }
+    
+    .explane-text-wrapper{
+        width: 550px;
+        padding: 20px;
+    }
+
+    .explane-letter-wrapper > p{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .small-honeybee{
+        width: 290px;
+        rotate: 0deg;
+        transform: translate(43% , 27%);
+    }
+
+    .recommend-line-wrapper{
+        flex-wrap: wrap;
+    }
+    
+    .recommend-text-area{
+        flex-basis: 80%;
+    }
+    .hashtag{
+        font-size: 20px;
+    }
+
+    .recommend-name{
+        letter-spacing: -1px;
+    }
+
+    .goto-recommend{
+        font-size: 18px;
+    }
+
+    .recommend-container > figure{
+        flex-basis: 35%;
+        transform: translate(0px, 60px);
+    }
+
+    .banner-area p{
+        font-size: 25px;
+    }
+
+    .explane-character{
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
+
+    .explane-choice-character{
+        font-size: 20px;
+        max-width: 410px;
+    }
+    
+    .coice-contents{
+        gap: 97px;
+    }
+
+    .chrancter-name{
+        font-size: 40px;
+    }
+
+    .almond{
+        width: 260px;
+    }
+
+    .chrancter-name{
+        font-size: 40px;
+    }
+
+    .three-chracter figure{
+        width: 260px;
+        height: 200px;
+    }
+    
+    .three-chracter figure:nth-child(1){
+        transform: translate(38%, 15%);
+    }
+
+    .three-chracter figure:nth-child(2){
+        width: 200px;
+        height: 240px;
+        transform: translate(75%, -13%);
+    }
+    
+    .three-chracter figure:nth-child(3){
+        transform: translate(-42%, 37%);
+    }
+
 }
