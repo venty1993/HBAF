@@ -106,6 +106,17 @@
     right: 25px;
 }
 
+.alert-and-navershoping a{
+    color: var(--main-white-color);
+}
+
+.alert-button{
+    width: 100%;
+    background-color: var(--main-white-color);
+    opacity: 50%;
+
+}
+
 .mobile-hmaburger{
     display: none;
 }
@@ -145,11 +156,15 @@
 
 #explane-hbaf{
     width: 100vw;
+}
+
+.over-flow-hiden{
     background-color: var(--main-orange-color);
     display: flex;
     justify-content: center;
-    padding-top: 162px;
-    padding-left: 180px;
+    padding: 162px 0px;
+    padding-left: 250px;
+    overflow: hidden;
 }
 
 .explane-honeybee{
@@ -165,27 +180,36 @@
     rotate: 6deg;
     right: 0;
     top: 50%;
-    transform: translate(53%, -50%);
+    transform: translate(-22%, -74%);
+    z-index: 1;
+}
+
+.explane-honeybee-wrapper{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-80%, 47%);
     z-index: 1;
 }
 
 .explane-box{
-    width: 849px;
-    height: 504px;
     background-color: var(--main-white-color);
     border-radius: 10px;
     border: 3px solid var(--main-brown-color);
     rotate: -4deg;
+    box-shadow: 10px 10px 10px 0px rgb(0 0 0/25%);
+    position: relative;
 }
 
 .explane-text-wrapper{
-    padding-top: 50px;
+    padding: 50px;
+    max-width: 840px;
 }
 
 .explane-logo-letter-wrapper{
     display: flex;
     align-items: baseline;
-    gap: 45px;
+    gap: 40px;
     justify-content: center;
 }
 
@@ -211,17 +235,16 @@
 }
 
 .explane-letter-wrapper{
-    padding-top: 64px;
-    padding-left: 64px;
-    padding-bottom: 32px;
+    padding : 24px;
 }
 
 .explane-letter-wrapper > p{
     display: block;
     font-size: 20px;
     color: var(--main-brown-color);
-    padding-top: 20px;
-    padding-left: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    letter-spacing: -2px;
 }
 
 .explane-letter-wrapper > p::after{
@@ -254,13 +277,17 @@
 }
 
 .about-hbaf-fly-bee{
-    transform: translate(-45%, -55%);
     position: relative;
 }
 
+.honey-bee-wrapper{
+    top: 0;
+    right: 0;
+    position: absolute;
+    transform: translate(60%, -50%);
+}
+
 .fly-honeybee{
-    width: 300px;
-    height: 200px;
     display: flex;
 }
 
@@ -277,11 +304,14 @@
     width: 370px;
     height: 390px;
     rotate: 15deg;
-    transform: translate(-120%,80%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(63% , 27%)
 }
 
 #original-almond {
-    padding-top: 86px;
+    padding-top: 64px;
     margin-right: 320px;
 }
 #original-almond > h2{
@@ -299,20 +329,13 @@
     position: relative;
 }
 
-.originalimg-text-wrapper{
-    width: var(--container-size);
+.original-almond-linebackground > p{
     margin: 0 auto;
-}
-
-
-.original-wrapper > p {
-    font-size: 20px;
-    color: var(--main-brown-color);
-    line-height: 168%;
-}
-
-.original-wrapper{
+    width: var(--container-size);
     padding-top: 30px;
+    font-size: 20px;
+    line-height: 168%;
+    color: var(--main-brown-color);
 }
 
 
@@ -327,7 +350,6 @@
 .honeybutter-almond-wrapper > figure{
     padding-top: 30px;
     width: 360px;
-    flex-grow: 0;
 }
 
 .honey-butter-explane-area{
@@ -414,12 +436,8 @@
 }
 
 #recommend-area{
-    width: var(--container-size);
+    max-width: var(--container-size);
     padding-top: 64px;
-    margin: 0 auto;
-}
-
-.recommend-tittle{
     margin: 0 auto;
 }
 
@@ -448,6 +466,7 @@
     height: 56px;
     border-radius: 50px;
     margin: 0 auto;
+    position: relative;
 }
 
 .recommend-product > p{
@@ -456,6 +475,10 @@
     color: var(--main-brown-color);
     font-size: 30px;
     font-weight: bold;
+    position: absolute;
+    top: -10%;
+    transform: translateY(50%);
+    width: 100%;
 }
 
 .recommend-container-wrppaer{
@@ -467,8 +490,9 @@
     display: flex;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    width: 630px;
+    width: 100%;
     align-items: center;
+    box-shadow: -5px 6px 10px 5px rgba(0, 0, 0 ,25%);
 }
 
 
@@ -478,7 +502,7 @@
 
 .recommend-container > figure{
     flex-basis: 40%;
-    width: 200px;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -487,6 +511,7 @@
     width: 360px;
     padding: 20px;
     padding-right: 0px;
+    flex-basis: 60%;
 }
 .hashtag{
     font-size: 22px;
@@ -525,7 +550,7 @@
 }
 
 #banner-container{
-    padding-top: 62px;
+    padding-top: 64px;
     margin-top: 0 auto;
     margin: 0 auto;
 }
@@ -652,6 +677,10 @@
     margin: 0 auto;
 }
 
+.choice-text-explane{
+    max-width: 600px;
+}
+
 
 .choice-text{
     font-size: 80px;
@@ -675,6 +704,7 @@
     color: var(--main-yello-color2);
     font-size: 40px;
     font-weight: bold;
+    line-height: 150%;
 }
 
 .explane-choice-character{
@@ -715,21 +745,45 @@
     justify-content: end;
 }
 
-.choice-chracter-area{
-    display: flex;
-    position: relative;
+.choice-chracter-area figure{
+    z-index: 1;
 }
 
 .small-bean{
     transform: scaleX(-1);
 }
 
+.choice-chracter-area{
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-basis: 30%;
+}
+
 .chracter-background{
-    width: 740px;
-    height: 280px;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-image: url(../HBAFimg/KakaoTalk_20221228_153730042_13.png);
+    /* align-items: baseline; */
 }
+
+.chrancter-name{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--main-brown-color);
+}
+
+/* .ddanghong{
+    transform: translateX(-260%);
+}
+
+.small-bean-name{
+    transform: translateX(-90%);
+} */
 
 .choice-right .choice-chracter-area > figure{
     position: absolute;
@@ -771,10 +825,10 @@
     padding-bottom: 286px;
 }
 .three-chracter figure:nth-child(2){
-    width: 300px;
+    width: 280px;
     position: absolute;
-    top: 10%;
-    right: 50%;
+    top: 16%;
+    right: 52%;
     transform: translate(53%, -19%);
 }
 
@@ -787,4 +841,49 @@
 
 footer{
     background-color: var(--footer-color);
+    padding-top: 64px;
+    padding-bottom: 24px;
+}
+
+.footer-wrapper {
+    width: var(--container-size);
+    margin: 0 auto;
+}
+
+.footer-wrapper > h1{
+    background-image: url(../HBAFimg/logo_01.png);
+    background-repeat: no-repeat;
+    width:  140px;
+    height: 60px;
+    background-size: cover;
+}
+
+.information-text > p{
+    margin-top: 24px;
+}
+
+.footer-information-wrwapper p{
+    color: var(--footer-font-color);
+    align-items: center;
+}
+
+.footer-information-wrwapper{
+    padding-top: 24px 110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert-area{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.alert-area a {
+    color: var(--footer-font-color);
+}
+
+
+@media screen and (max-width:1024px) {
+   
 }
