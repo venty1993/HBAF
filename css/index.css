@@ -15,7 +15,7 @@
     --footer-color : #353535;
     --footer-font-color: #bdbdbd;
     /* size */
-    --container-size: 1282px
+    --container-size: 1280px
  }
 
 
@@ -37,18 +37,22 @@
     z-index: 100;
 }
 
-#hbaf-header{
+.hbaf-header{
     position: fixed;
     top: 0;
     width: 100%;
     left: 0;
     z-index: 1;
-    /* height: 290px; */
     height: 65px;
     transition: 1s;
-    background-color: var(--main-yello-color2);
     overflow: hidden;
 }
+
+.color{
+    color: var(--main-brown-color);
+}
+
+
 
 .header-logo{
     width: 90px;
@@ -71,7 +75,16 @@
 }
 
 .header-active{
-    height: 260px;
+    height: 290px;
+    background-color: var(--main-yello-color2);
+}
+
+.hide-header{
+    transform: translateY(-100%);
+}
+
+.scrolled{
+    background-color: #3e2612aa;
 }
 
 
@@ -88,7 +101,7 @@
 }
 
 .menu a {
-    color: var(--main-brown-color);
+    color: var(--main-white-color);
     font-size: 20px;
     font-weight: 800;
 }
@@ -662,9 +675,16 @@
     padding-top: 24px;
 }
 
+.contents {
+    width: 308px;
+    flex-shrink: 0;
+    position: relative;
+}
+
 .contents > figure{
     border-radius: 10px;
     overflow: hidden;
+    height: 285px;
 }
 
 .event-text-wrapper{
@@ -674,10 +694,20 @@
 .contents-name{
     font-size: 20px;
     font-weight: bold;
+    letter-spacing: -2px;
+    text-align: center;
 }
-.event-explane-text{
+
+.event-explane-text {
     font-size: 15px;
     color: var(--footer-font-color);
+    padding-top: 16px;
+    line-height: 32px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
 }
 
 #choice-hbaf{
@@ -732,6 +762,48 @@
     font-size: 30px;
     line-height: 155%;
     color: var(--main-white-color);
+}
+
+
+.arrow-wrapper{
+    position: relative;
+    width: var(--container-size);
+    margin: 0 auto;
+}
+
+.before-contents-arrow{
+    rotate: -135deg;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(250%, 0%);
+}
+
+.before-contents-arrow::after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid var(--main-orange-color);
+    border-right: 2px solid var(--main-orange-color);
+    display: block;
+}
+
+.next-contents-arrow{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(250%, 0%);
+    rotate: 45deg;
+}
+
+.next-contents-arrow::after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid var(--main-orange-color);
+    border-right: 2px solid var(--main-orange-color);
 }
 
 .more{
