@@ -12,7 +12,7 @@ function headerMenu() {
         }
     })
     
-    headerNav.addEventListener('mouseleave', ()=>{
+    header.addEventListener('mouseleave', ()=>{
         header.classList.remove('header-active')
     })
 }
