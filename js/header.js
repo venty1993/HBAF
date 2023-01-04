@@ -17,39 +17,39 @@ function headerMenu() {
     })
 }
 
-// const header = document.querySelector('.hbaf-header');
-// let 이전스크롤좌표 = window.screenY;
+const header = document.querySelector('.hbaf-header');
+let 이전스크롤좌표 = window.screenY;
 
-// window.addEventListener('scroll', (e)=>{
-//     console.log(window.scrollY);
-//     if(window.scrollY > 68){
-//         스크롤안된해더();
-//     }
-//     else{
-//         스크롤안된해더();
-//     }
+window.addEventListener('scroll', (e)=>{
+    console.log(window.scrollY);
+    if(window.scrollY > 68){
+       스크롤된해더();
+    }
+    else{
+        스크롤안된해더();
+    }
 
-//     if(이전스크롤좌표 < window.scrollY){
-//         스크롤사라짐();
-//     }
-//     else{
-//         스크롤나타날();
-//     }
-// })
+    if(이전스크롤좌표 < window.scrollY){
+        스크롤사라짐();
+    }
+    else{
+        스크롤나타날();
+    }
+})
 
-// function 스크롤된해더(){
-//     header.classList.add('scrolled');
-// }
+function 스크롤된해더(){
+    header.classList.add('scrolled');
+}
 
-// function 스크롤안된해더(){
-//     header.classList.remove('scrolled');
-// }
+function 스크롤안된해더(){
+    header.classList.remove('scrolled');
+}
 
-// function 스크롤사라짐() {
-//     header.classList.add('hide-header');
-// }
+function 스크롤사라짐() {
+    header.classList.add('hide-header');
+}
 
-// function 스크롤나타날(){
-//     header.classList.remove('hide-header')
-// }
+function 스크롤나타날(){
+    header.classList.remove('hide-header')
+}
 
