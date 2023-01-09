@@ -1,4 +1,3 @@
-
     const conTents = document.getElementsByClassName('contents');
     const contentsWrapper = document.getElementsByClassName('event-slidewrapper');
     const slidewrapper = document.getElementsByClassName('contents-wrapper');
@@ -13,7 +12,7 @@
 
     leftButton[0].addEventListener('click', (e) => {
         e.preventDefault();
-        leftslide();
+        prevButton();
     })
 
     rightButton[0].addEventListener('click', (e)=> {
@@ -31,11 +30,12 @@
     }
 
 
-    function leftslide () {
+    function prevButton() {
         if(index > 0) {
-            index--;
         }
         contentsSize();
+        index--;
+        
     }
 
     function rifgtslide() {

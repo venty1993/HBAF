@@ -479,7 +479,7 @@
     padding-left: 10%;
 }
 
-.original-text{
+/* .original-text{
     color: var(--main-orange-color);
     opacity: 40%;
     font-size: 120px;
@@ -488,7 +488,7 @@
     right: 0;
     bottom: 0;
     transform: translate(-5%, -10%);
-}
+} */
 
 #recommend-area{
     max-width: var(--container-size);
@@ -908,6 +908,16 @@
 
 .choice-chracter-area figure{
     z-index: 1;
+    animation-name: coice-chracter;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+.almond{
+    width: 330px;
+    animation-name: choice-almond;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 .small-bean{
@@ -965,10 +975,6 @@
 }
 
 
-.almond{
-    width: 330px;
-}
-
 .three-chracter{
     width: 100%;
     height: 800px;
@@ -986,7 +992,6 @@
 
 .three-chracter figure{
     max-width: 400px;
-    padding-bottom: 286px;
 }
 
 .three-chracter figure:nth-child(1){
@@ -994,6 +999,9 @@
     top: 0;
     left: 0;
     transform: translate(30%, 23%);
+    animation: 4s;
+    animation-iteration-count: infinite;
+    animation-name: kimsnack;
 }
 
 .three-chracter figure:nth-child(2){
@@ -1002,13 +1010,19 @@
     top: 20%;
     right: 52%;
     transform: translate(84%, -19%);
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: ddanghong;
 }
 
 .three-chracter figure:nth-child(3){
     position: absolute;
     bottom: 0;
     right: 0;
-    transform: translate(-55%, 10%);
+    transform: translate(-55%, -74%);
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: smallbean;
 }
 
 footer{
@@ -1134,6 +1148,78 @@ footer{
     }
 }
 
+@keyframes choice-almond{
+    0%{
+        transform: translateY(-30%);
+    }
+
+    50%{
+        transform: translateY(-40%);
+    }
+
+    100%{
+        transform: translateY(-30%);
+    }
+}
+
+@keyframes coice-chracter{
+    0%{
+        transform: translateY(-50%);
+    }
+
+    50%{
+        transform: translateY(-55%);
+    }
+
+    100%{
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes kimsnack {
+    0%{
+        transform: translate(30% , 23%);
+    }
+
+    50%{
+        transform: translate(30% , 17%);
+    }
+
+    100%{
+        transform: translate(30% , 23%);
+    }
+}
+
+@keyframes ddanghong{
+    0%{
+        transform: translate(84%, -19%);
+    }
+
+    50%{
+        transform: translate(84%, -10%);
+    }
+
+    100%{
+        transform: translate(84%, -19%);
+    }
+}
+
+@keyframes smallbean{
+    0%{
+        transform: translate(-55%, -74%);
+    }
+
+    50%{
+        transform: translate(-55%, -84%);
+    }
+
+    100%{
+        transform: translate(-55%, -74%);
+    }
+}
+
+
+
 @media screen and (max-width:1420px) {
     
     #explane-hbaf{
@@ -1197,13 +1283,16 @@ footer{
         transform: translateX(-36%);
     }
 
+    .three-chracter figure:nth-child(1){
+        width: 320px;
+    }
+    
     .three-chracter figure:nth-child(2){
-        transform: translate(110%, -19%);
-        width: 280px;
+        width: 250px;
     }
 
     .three-chracter figure:nth-child(3) {
-        transform: translate(-30%, 10% );
+        width: 250px;
     }
 
 }
@@ -1356,5 +1445,63 @@ footer{
     .alert-and-navershoping{
         display: none;
     }
+
+    .explane-box{
+        width: 650px;
+    }
     
+    .explane-honeybee{
+        width: 230px;
+    }
+
+    .explane-honeybee-lastimg{
+        width: 60px;
+        right: -12px;
+        top: 50%;
+    }
+
+    .explane-text-wrapper{
+        width: 300px;   
+    }
+
+    .explane-logo-letter-wrapper{
+        gap: 10px;
+    }
+
+    .explane-logo-letter-wrapper > figure{
+        width: 90px;
+    }
+
+    .explane-logo-letter-wrapper h3{
+        font-size: 12px;
+    }
+
+    .explane-letter-wrapper{
+        padding: 0px 20px;
+    }
+
+    .explane-letter-wrapper > p {
+        font-size: 12px;
+    }
+
+    .more-view{
+        width: 50px;
+        height: 15px;
+        padding: 5px 10px;
+    }
+
+    .more-view > a{
+        font-size: 7px;
+    }
+
+    .honey-bee-wrapper{
+        width: 107px;
+        right: 65px;
+    }
+
+    .small-honeybee{
+        width: 140px;
+        right: 74px;
+        bottom: -130px;
+    }
 }
