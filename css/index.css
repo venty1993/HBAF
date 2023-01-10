@@ -540,7 +540,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0px 32px;
-    position: relative;
+    /* position: relative; */
 }
 
 .recommend-container{
@@ -551,6 +551,7 @@
     align-items: center;
     box-shadow: -5px 6px 10px 5px rgba(0, 0, 0 ,25%);
     overflow: hidden;
+    position: relative;
 }
 
 
@@ -1347,9 +1348,15 @@ footer{
     }
 
     .small-honeybee{
+        right: 13%;
+        bottom: -10%;
         width: 290px;
         rotate: 0deg;
         transform: translate(43% , 27%);
+    }
+
+    .honey-bee-wrapper{
+        right: 7%;
     }
 
     .recommend-line-wrapper{
@@ -1430,6 +1437,14 @@ footer{
 
 @media screen and (max-width: 360px) {
 
+    .explane-letter-wrapper .mobile-hide{
+        display: none;
+    }
+    
+    .mobile-ver{
+        display: inline-block;
+    }
+
     .hbaf-header{
         position: absolute;
     }
@@ -1451,11 +1466,11 @@ footer{
     }
     
     .explane-honeybee{
-        width: 230px;
+        width: 160px;
     }
 
     .explane-honeybee-lastimg{
-        width: 60px;
+        width: 46px;
         right: -12px;
         top: 50%;
     }
@@ -1482,6 +1497,7 @@ footer{
 
     .explane-letter-wrapper > p {
         font-size: 12px;
+        margin-top: 5px;
     }
 
     .more-view{
@@ -1499,9 +1515,53 @@ footer{
         right: 65px;
     }
 
+    .explane-honeybee-wrapper{
+        left: 19px;
+        bottom: 44%;
+    }
+
     .small-honeybee{
         width: 140px;
         right: 74px;
         bottom: -130px;
+    }
+
+    #original-almond{
+        margin-right: 16px;
+        padding-top: 24px;
+    }
+
+    #original-almond > h2{
+        font-size: 60px;
+    }
+
+    .original-fly-bee{
+        display: none;
+    }
+
+    .original-almond-linebackground > p{
+        font-size: 12px;
+        margin-left: 16px;
+    }
+
+    .keyword{
+        font-size: 15px;
+    }
+
+    .honeybutter-almond-explane{
+        font-size: 12px;
+    }
+    
+    .recommend-container{
+        width: 327px;
+        height: 100px;
+    }
+
+    .hashtag{
+        font-size: 12px;
+    }
+
+    .recommend-name{
+        font-size: 20px;
     }
 }
