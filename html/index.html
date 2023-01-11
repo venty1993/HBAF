@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
+    <!-- 글자가 흘러내려가는 인터렉션 구현하고 싶은데 방법 -->
+    <!-- 배너 js시 배경 색 바꾸고 싶은데 어떻게 해야하는지 -->
     <header class="hbaf-header">
         <div class="header-wrapper ">
             
@@ -152,7 +154,7 @@
             <img src="../HBAFimg/honeybee.png" alt="날고있는 허니버터 아몬드">
         </figure>
     </header>
-
+    <!-- 모바일 버전에서 화면 꽉차게 만드는방법 -->
     <section id="video-place">
         <video src="../HBAFimg/Unlimited HBAF_포스터편_30”.mp4" autoplay muted loop>
         </video>
@@ -160,13 +162,14 @@
             Healthy But Awesome Flavors
         </p>
     </section>
-
+    
     <section id="explane-hbaf">
         <div class="over-flow-hiden">
-
+            
             <div class="explane-box">
                 <div class="explane-honeybee-wrapper">
-
+                    
+                    <!-- 손 흔드는게 기준점 바꿀 수 있는지 -->
                     <div class="explane-honeybee">
                         <figure class="explane-honeybee-firstimg">
                             <img src="../HBAFimg/mobilde-ver-honey-nohands.png" alt="손을 흔들고 있는 허니버터아몬드 몸통부분 사진">
@@ -245,6 +248,7 @@
         
         <section id="original-almond">
         <h2>ORIGINAL</h2>
+        <!-- 배경 after는 선택할 수 없나요? 가상선택자 선택하는방법 -->
         <div class="original-almond-linebackground">
             <p>
                 원조는 다릅니다. 판매량이 말해줍니다. <br> 
@@ -432,6 +436,7 @@
             
             <div class="carrot-almond-wrapper">
                 <figure class="carrot-cake-almond">
+                    <!-- 애니메이션 어떻게 넣어야 하나요? -->
                     <img src="../HBAFimg/carrotcake.png" alt="당근맛 아몬드">
                 </figure>
                 <figure class="carrot-cake-bottom">
@@ -466,7 +471,7 @@
         <div class="arrow-wrapper">
             <div class="event-slidewrapper">
                 <div class="contents-wrapper">
-
+                    <!--  코드 짰는데 넘어가는거 이상함 -->
                     <div class="contents">
                         <a href="#" class="unit-link"></a>
                         <figure>
@@ -560,7 +565,11 @@
                 <h2 class="choice-text">
                     CHOICE <span class="brown">HBAF</span>
                 </h2>
-                <p class="choice-explane-text-explane">오직 HBAF 에서만 놀라운 선택의 폭! 귀여운 HBAF 캐릭터들을 만나보세요!</p>
+                <p class="choice-explane-text-explane">오직 HBAF 에서만 놀라운 선택의 폭! 
+                    <span class="mobile-hide">
+                        귀여운 HBAF 캐릭터들을 만나보세요!
+                    </span> 
+                </p>
             </div>
             
             <div class="choice-content-wrapper">
@@ -620,7 +629,8 @@
             <div class="coice-contents choice-right">
                 <div class="choice-text-explane">
                     <p class="explane-character">
-                        국민 견과류! 땅콩의 고소함 속으로!
+                        국민 견과류! <br class="mobile-ver">
+                        땅콩의 고소함 속으로!
                     </p>
                     <p class="explane-choice-character">
                         모두가 알고 있는 바로 그맛! <br>
@@ -657,7 +667,8 @@
                 </div>
                 <div class="choice-text-explane">
                     <p class="explane-character">
-                        작고 귀여운 병아리콩의 반란!
+                        작고 귀여운 <br class="mobile-ver">
+                        병아리콩의 반란!
                     </p>
                     <p class="explane-choice-character">
                         다른 견과류보다 작지만 <br class="mobile-ver">
@@ -672,6 +683,7 @@
             </div>
         
             <div class="three-chracter">
+                <!-- 애니메이션에서 translate 넣으면 css로 다시 조절할 수 없나요? -->
                 <figure>
                     <img src="../HBAFimg/kim.png" alt="김스낵">
                 </figure>
@@ -726,5 +738,6 @@
 
     <script src="../js/event-hbaf.js"></script>
     <script src="../js/header.js"></script>
+    <script src="../js/animation.js"></script>
 </body>
 </html>
