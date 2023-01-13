@@ -5,12 +5,9 @@ scrollhead();
 function headerMenu() {
     const header = document.querySelector('.hbaf-header');
     const headerNav = document.querySelector('.menu-tittle-wrapper');
-    const changeColor = document.getElementsByClassName('translate-color');
     headerNav.addEventListener('mouseenter', ()=> {
         header.classList.add('header-active');
-        for (let i = 0; i < changeColor.length; i++) {
-            changeColor[i].classList.add('color');
-        }
+        header.classList.add('header-back');
     })
     
     header.addEventListener('mouseleave', ()=>{

@@ -37,6 +37,60 @@
     z-index: 100;
 }
 
+#hbaf-intro{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 150;
+    background-color: var(--main-brown-color);
+}
+
+.intro-overflow{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.intro-overflow > figure{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: left;
+}
+
+.up{
+    top: -133%;
+    left: -50%;
+    animation-name: intro-animation-up;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+}
+
+.down{
+    bottom: -112%;
+    left:7%;
+    animation-name:intro-animation-down;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+}
+
+
+.open-hbaf-text{
+    background-image: url(../HBAFimg/logo_01.png);
+    background-repeat: repeat;
+    width: 150vw;
+    height: 100vw;
+    z-index: 200;
+    position: absolute;
+    rotate: 328deg;
+    background-color: var(--main-brown-color);
+}
+
+
 .hbaf-header{
     position: fixed;
     top: 0;
@@ -77,6 +131,10 @@
 
 .header-active{
     height: 290px;
+    background-color: var(--main-yello-color2);
+}
+
+.header-back{
     background-color: var(--main-yello-color2);
 }
 
@@ -373,6 +431,7 @@
 
 .back-sa::after{
     right: 100%;
+    transition: 2s;
 }
 
 .original-almond-linebackground::after{
@@ -661,6 +720,7 @@
     animation-name: carrotland;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    animation-play-state: paused;
     position: absolute;
     overflow: hidden;
     bottom: -38%;
@@ -1245,6 +1305,35 @@ footer{
 
     100%{
         transform: translate(145%, 67%);
+    }
+}
+
+
+@keyframes intro-animation-up {
+    0%{
+        transform: translateX(0%);
+    }
+
+    50%{
+        transform: translateX(12%);
+    }
+
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes intro-animation-down {
+    0%{
+        transform: translateX(0%);
+    }
+
+    50%{
+        transform: translateX(12%);
+    }
+
+    100%{
+        transform: translateY(100%);
     }
 }
 
