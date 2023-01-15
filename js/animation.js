@@ -1,6 +1,6 @@
 orginalLinetext();
 backgroundcontrol();
-carrot();
+carrotPlay();
 
 
 function orginalLinetext() {
@@ -28,11 +28,13 @@ function orginalLinetext() {
     
 }
 
+let choiceR = document.querySelectorAll('div');
+
 function backgroundcontrol() {
     
     let observer = new IntersectionObserver ((e)=>{
             e.forEach((background)=>{
-                if(background.intersectionRatio > 0){
+                if(background.isIntersecting){
                     background.target.classList.remove('back-sa::after');
                 } else{
                     background.target.classList.add('back-sa::after');
@@ -43,18 +45,17 @@ function backgroundcontrol() {
         observer.observe(backgroundani[0]);
 }
 
-function carrot(){
+function carrotPlay(){
     let observer = new IntersectionObserver ((e)=>{
-        e.forEach((carrot)=>{
-            if(carrot.intersectionRatio > 0){
-                carrot.target.classList.add('carrot-active');
+        e.forEach((박스)=>{
+            if(박스.isIntersecting){
+                박스.target.classList.add('carrot-active');
             } else{
-                carrot.target.classList.remove('carrot-active');
+                박스.target.classList.remove('carrot-active');
             }
         })
     })
-    
-    let carrot = document.querySelectorAll('figure');
-    observer.observe(carrot[16]);
-    observer.observe(carrot[17]);
+    let carrotimg = document.querySelectorAll('figure');
+    observer.observe(carrotimg[17]);
+    observer.observe(carrotimg[18]);
 }

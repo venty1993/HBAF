@@ -43,6 +43,11 @@
     position: absolute;
     z-index: 150;
     background-color: var(--main-brown-color);
+    animation-name: intro-visivility;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-delay: 4.5s;
 }
 
 .intro-overflow{
@@ -60,6 +65,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transform-origin: left;
+    animation-name: intro-logo;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
 }
 
 .up{
@@ -209,7 +218,7 @@
 }
 
 #video-place > video{
-    height: 100vh;
+    width: 100%;
     display: block;
 }
 
@@ -393,9 +402,6 @@
     animation-iteration-count: infinite;
 }
 
-.fly-honeybee-body{
-    flex-basis: 70%;
-}
 
 .small-honeybee{
     width: 370px;
@@ -580,6 +586,9 @@
     color: var(--main-brown-color);
     font-weight: bold;
     display: inline;
+    position: absolute;
+    z-index: -100;
+    top: 50%;
 }
 
 .injermi-wrapper figure {
@@ -972,7 +981,11 @@
     top: 0;
     background-image: url(../HBAFimg/KakaoTalk_20221228_153730042_12.png);
     background-size: contain;
+}
 
+.choice-back::after{
+    left: 1000%;
+    transition: 0.5s;
 }
 
 .coice-contents.choice-left .choice-chracter-area::after{
@@ -1084,7 +1097,7 @@
     top: 20%;
     left: 20%;
     transform: translate(72%, -12%);
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-name: ddanghong;
 }
@@ -1094,7 +1107,7 @@
     left: 20%;
     top: 20%;
     transform: translate(145%, 67%);
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-name: smallbean;
 }
@@ -1282,15 +1295,15 @@ footer{
 
 @keyframes ddanghong{
     0%{
-        transform: translate(72%, -12%);
-    }
-
-    50%{
         transform: translate(72%, -17%);
     }
 
-    100%{
+    50%{
         transform: translate(72%, -12%);
+    }
+
+    100%{
+        transform: translate(72%, -17%);
     }
 }
 
@@ -1338,6 +1351,36 @@ footer{
 }
 
 
+@keyframes intro-logo{
+    0%{
+        scale: -13deg;
+    }
+    50%{
+        rotate: 13deg;
+    }
+    100%{
+        rotate: 0;
+        /* transform: translate(-50%, -50%) scale(1.5); */
+    }
+}
+
+@keyframes intro-visivility{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .explane-honeybee-wrapper{
+        left: 10%;
+    }
+}
 
 @media screen and (max-width:1420px) {
     
@@ -1347,10 +1390,6 @@ footer{
 
     .explane-box{
         width: 650px;
-    }
-
-    .explane-honeybee-wrapper{
-        transform: translate(-85%, 47%);
     }
 
     .over-flow-hiden{
@@ -1371,7 +1410,7 @@ footer{
     }
 
     .honey-bee-wrapper{
-        transform: translate(17%, -50%);
+        right: 10%;
     }
 
     .explane-honeybee{
@@ -1379,7 +1418,7 @@ footer{
     }
 
     .explane-honeybee-lastimg{
-        transform: translate(-3%, -165px);
+       width: 204px;
     }
 
     .over-flow-hiden {
@@ -1387,7 +1426,7 @@ footer{
     }
 
     .small-honeybee{
-        transform: translate(40% , 27%);
+        right: 15%;
     }
 
     .menu a{
@@ -1440,7 +1479,7 @@ footer{
     }
 
     .explane-honeybee-wrapper{
-        transform: translate(-65%, 58%);
+        left: 21%;
     }
 
     .explane-honeybee{
@@ -1448,9 +1487,7 @@ footer{
     }
 
     .explane-honeybee-lastimg{
-        transform: translate(16% , -77%);
-        top: 55%;
-        right: -38px;
+        width: 180px;
     }
     
     .explane-text-wrapper{
