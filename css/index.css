@@ -1132,7 +1132,7 @@ footer{
 }
 
 .information-text > p{
-    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .footer-information-wrwapper p{
@@ -1453,6 +1453,18 @@ footer{
         width: 250px;
     }
 
+    .almond{
+        width: 260px;
+    }
+
+    .explane-character{
+        font: 35px;
+    }
+
+    .explane-choice-character{
+        font-size: 25px;
+    }
+
 }
 
 @media screen and (max-width:834px) {
@@ -1581,6 +1593,28 @@ footer{
     .three-chracter figure{
         width: 260px;
         height: 200px;
+    }
+
+    .ddanghong{
+        width: 190px;
+    }
+
+    .footer-wrapper > h1{
+        width: 100px;
+        height: 60px;
+    }
+
+    .footer-wrapper{
+        padding: 0px 20px;
+    }
+
+    .footer-wrapper > h1{
+        width: 140px;
+        height: 60px;
+    }
+    
+    .footer-information-wrwapper{
+        margin-top: 24px;
     }
 
 }
