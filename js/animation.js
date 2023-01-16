@@ -3,6 +3,7 @@ backgroundcontrol();
 carrotPlay();
 
 
+
 function orginalLinetext() {
     
     let observer = new IntersectionObserver ((e)=>{
@@ -49,9 +50,9 @@ function backgroundcontrol() {
     let observer = new IntersectionObserver ((e)=>{
             e.forEach((background)=>{
                 if(background.isIntersecting){
-                    background.target.classList.remove('back-sa::after');
+                    background.target.classList.remove('back-sa');
                 } else{
-                    background.target.classList.add('back-sa::after');
+                    background.target.classList.add('back-sa');
                 }
             })
         })
@@ -73,3 +74,5 @@ function carrotPlay(){
     observer.observe(carrotimg[17]);
     observer.observe(carrotimg[18]);
 }
+
+

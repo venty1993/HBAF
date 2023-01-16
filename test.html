@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #front-animation {
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+
+        }
+        .cover {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cover-inner {
+            width: 2500px;
+            height: 1920px; 
+            transform: rotate(320deg);        
+            position: relative;
+            background-image: url(HBAFimg/logo_01.png);
+            background-color: rgb(88, 10, 10);
+            
+        }
+        
+        .top {
+            
+            background-position: bottom;
+            transform-origin: center bottom;
+            animation:slide-top 2s 3s both
+        }
+        .bottom {
+            background-position: top;
+            transform-origin: center top;
+            animation: slide-bottom 2s 3s both;
+        }
+
+        @keyframes slide-top {
+            from{
+                transform: rotate(320deg) translateY(0);
+            }
+            to {
+                transform: rotate(320deg) translateY(-100%);
+            }
+        }
+        @keyframes slide-bottom {
+            from{
+                transform: rotate(320deg) translateY(0);
+            }
+            to {
+                transform: rotate(320deg) translateY(100%);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="front-animation">
+
+        <div class="cover">
+            <div class="cover-inner top"></div>
+            <div class="cover-inner bottom"></div>
+        </div>
+    </div>
+    <main>
+        여기서부터 내용입니다 ㅎㅎ
+    </main>
+</body>
+</html>

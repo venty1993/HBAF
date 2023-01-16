@@ -32,9 +32,10 @@
 
     function prevButton() {
         if(index > 0) {
+            
         }
-        contentsSize();
         index--;
+        contentsSize();
         
     }
 
@@ -43,6 +44,7 @@
             index++
         }
         index++;
+        contentsSize();
     }
 
     function contentsSize() {
