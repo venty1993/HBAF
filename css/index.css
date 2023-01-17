@@ -17,6 +17,10 @@
     /* size */
     --container-size: 1280px
  }
+ 
+body{
+    overflow: hidden;
+}
 
 .hide-text {
     position: absolute;
@@ -197,25 +201,36 @@
 
 .alert-and-navershoping  li{
     flex-shrink: 0;
+    font-weight: 700;
+    width: 81px;
 }   
+
+.alert-and-navershoping:last-child a{
+    color: var(--main-white-color);
+}
+
 .alert-and-navershoping{
     font-size: 15px;
     display: flex;
-    gap: 77px;
+    gap: 19px;
     position: absolute;
-    right: 25px;
+    right: 20px;
 }
 
 .alert-and-navershoping a{
-    color: var(--main-white-color);
-
+    color: var(--font-black);
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
 }
 
 .alert-button{
-    width: 100%;
-    background-color: var(--main-white-color);
-    opacity: 50%;
+    background-color: rgba(255, 255, 255, 0.50);
+    text-align: center;
+    border-radius: 30px;
+    padding: 15px 0px;
     position: relative;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0 ,25%);
 }
 
 .mobile-hmaburger{
@@ -460,10 +475,6 @@
     border-bottom-right-radius: 30px;
     transition: 2s;
 }
-.back-sa::after{
-    right: 100%;
-
-}
 
 .original-almond-linebackground > p{
     margin: 0 auto;
@@ -472,6 +483,8 @@
     font-size: 20px;
     line-height: 168%;
     color: var(--main-brown-color);
+    opacity: 0;
+    transition: 2s;
 }
 
 
@@ -561,6 +574,11 @@
     animation-name: honeybee;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    transition: 2s;
+}
+
+.original-fly-bee figure{
+    opacity: 0;
 }
 
 .ori-and-moreview-wrapper{
@@ -753,6 +771,8 @@
 }
 .banner-area p{
     padding-top: 30px;
+    opacity: 0;
+    transition: 2s;
 }
 
 .banner-left-text p:nth-child(2){
@@ -883,6 +903,8 @@
     color: var(--main-white-color);
     font-size: 20px;
     text-align: center;
+    opacity: 0;
+    transition: 2s;
 }
 
 .coice-contents{
@@ -896,6 +918,8 @@
     font-size: 40px;
     font-weight: bold;
     line-height: 150%;
+    opacity: 0;
+    transition: 2s;
 }
 
 .explane-choice-character{
@@ -904,6 +928,8 @@
     font-size: 30px;
     line-height: 155%;
     color: var(--main-white-color);
+    opacity: 0;
+    transition: 2s;
 }
 
 .mobile-ver{
@@ -918,29 +944,25 @@
 }
 
 .before-contents-arrow{
-    rotate: -135deg;
     position: absolute;
     top: 50%;
-    left: 0;
-    transform: translate(250%, 0%);
+    right:100%;
 }
 
 .before-contents-arrow::after{
     content: '';
-    display: block;
     width: 20px;
     height: 20px;
     border-top: 2px solid var(--main-orange-color);
-    border-right: 2px solid var(--main-orange-color);
+    border-left: 2px solid var(--main-orange-color);
     display: block;
+    transform: rotate(-45deg);
 }
 
 .next-contents-arrow{
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translate(250%, 0%);
-    rotate: 45deg;
+    left: 100%;
 }
 
 .next-contents-arrow::after{
@@ -950,6 +972,7 @@
     height: 20px;
     border-top: 2px solid var(--main-orange-color);
     border-right: 2px solid var(--main-orange-color);
+    transform: rotate(45deg);
 }
 
 .more{
@@ -992,16 +1015,21 @@
     top: 0;
     background-image: url(../HBAFimg/KakaoTalk_20221228_153730042_12.png);
     background-size: contain;
+    transition: 0.5s;
 }
 
 .choice-back::after{
-    left: 1000%;
-    transition: 0.5s;
+    left: 100%;
 }
+
 
 .coice-contents.choice-left .choice-chracter-area::after{
     left: unset;
     right: 0;
+}
+
+.choice-back-r::after{
+    transform: translateX(-20%);
 }
 
 .choice-chracter-area figure{
@@ -1009,6 +1037,8 @@
     animation-name: coice-chracter;
     animation-iteration-count: infinite;
     animation-duration: 4s;
+    opacity: 0;
+    transition: 1s;
 }
 
 .almond{
@@ -1039,6 +1069,8 @@
     bottom: 10%;
     z-index: 110;
     width: 100%;
+    opacity: 0;
+    transition: 2s;
 }
 
 .ddanghong{
@@ -1058,17 +1090,18 @@
     border-radius: 0px 100px 100px 0px;
 }
 
+.back-sa::after{
+    right: 100%;
+}
 
 .choice-right .choice-chracter-area > figure{
     position: absolute;
     top: 0;
-    transform: translateY(-55%);
 }
 
 .choice-left .choice-chracter-area > figure{
     position: absolute;
     top: 0;
-    transform: translateY(-48%);
     right: 0;
 }
 
@@ -1387,11 +1420,6 @@ footer{
 }
 
 
-@media screen and (max-width:1200px) {
-    .explane-honeybee-wrapper{
-        left: 10%;
-    }
-}
 
 @media screen and (max-width:1420px) {
     
@@ -1402,23 +1430,59 @@ footer{
     .explane-box{
         width: 650px;
     }
-
+    
     .over-flow-hiden{
         justify-content: center;
     }
-
+    
     .explane-honeybeeP{
         width: 600px;
+    }
+    
+}
+
+@media screen and (max-width:1200px) {
+    .explane-honeybee-wrapper{
+        left: 10%;
+    }
+
+    .navi-honey{
+        left: 2%;
+    }
+
+    .menu a{
+        font-size: 18px;
+    }
+
+    .alert-and-navershoping:last-of-type a{
+        font-size: 15px;
     }
 
 }
 
-
 @media screen and (max-width:1000px) {
     
+
     #explane-hbaf{
         padding-left: 30px;
     }
+
+    .menu-wrapper{
+        gap: 25px;
+    }
+
+    .alert-and-navershoping:last-of-type a{
+        font-size: 12px;
+    }
+
+    .alert-button{
+        width: 70px;
+    }
+
+    .alert-and-navershoping{
+        gap: 10px;
+    }
+
 
     .honey-bee-wrapper{
         right: 10%;

@@ -16,7 +16,7 @@ function headerMenu() {
 }
 
 function scrollhead() {
-
+    const headerNav = document.querySelector('.menu-tittle-wrapper');
     const header = document.querySelector('.hbaf-header');
     let lastScrollY = 0;
 
@@ -38,6 +38,10 @@ function scrollhead() {
         console.log(window.scrollY);
         if(window.scrollY > 68){
            스크롤된해더();
+        }
+        else if(headerNav.addEventListener('mouseover',()=>{
+            header.style.backgroundColor = '#fcd364';
+        })){
         }
         else{
             스크롤안된해더();
