@@ -12,7 +12,7 @@
 
     leftButton[0].addEventListener('click', (e) => {
         e.preventDefault();
-        prevButton();
+        leftslide();
     })
 
     rightButton[0].addEventListener('click', (e)=> {
@@ -34,7 +34,7 @@
     })
 
 
-    function prevButton() {
+    function leftslide() {
         if(index > 0) {
             
         }

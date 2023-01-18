@@ -35,6 +35,7 @@ function orginalLinetext() {
     observer.observe(figure[25]);
     observer.observe(figure[26]);
     observer.observe(figure[27]);
+    observer.observe(figure[28]);
     
     const text = document.querySelectorAll('p');
     observer.observe(text[10]);
@@ -57,7 +58,16 @@ function orginalLinetext() {
     observer.observe(text[56]);
     observer.observe(text[57]);
     observer.observe(text[58]);
+    observer.observe(text[59]);
+    observer.observe(text[60]);
+    
+    const div = document.querySelectorAll('div');
+    observer.observe(div[36]);
+    observer.observe(div[38]);
+    observer.observe(div[41]);
+    observer.observe(div[43]);
 }
+
 
 function backgroundcontrol() {
     

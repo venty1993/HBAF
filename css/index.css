@@ -663,6 +663,8 @@ body{
     box-shadow: -5px 6px 10px 5px rgba(0, 0, 0 ,25%);
     overflow: hidden;
     position: relative;
+    opacity: 0;
+    transition: 1s;
 }
 
 
@@ -816,6 +818,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: var(--container-size);
 }
 
 .event-area-wrapper > h2{
@@ -849,7 +852,6 @@ body{
 .contents > figure{
     border-radius: 10px;
     overflow: hidden;
-    height: 285px;
 }
 
 .event-text-wrapper{
@@ -1162,12 +1164,12 @@ body{
 
 footer{
     background-color: var(--footer-color);
+    padding: 24px;
 }
 
 .footer-wrapper {
     max-width: var(--container-size);
     margin: 0 auto;
-    padding: 36px 24px;
 }
 
 .footer-wrapper > h1{
@@ -1682,10 +1684,6 @@ footer{
         height: 60px;
     }
 
-    .footer-wrapper{
-        padding: 0px 20px;
-    }
-
     .footer-wrapper > h1{
         width: 140px;
         height: 60px;
@@ -1784,7 +1782,7 @@ footer{
 
     .honey-bee-wrapper{
         width: 70px;
-        right: 65px;
+        right: 80px;
     }
 
     .explane-text-wrapper .more-view{
@@ -1798,8 +1796,12 @@ footer{
 
     .small-honeybee{
         width: 140px;
-        right: 74px;
-        bottom: -130px;
+        right: 95px;
+        bottom: -165px;
+    }
+
+    .fly-honeybee-wings{
+        width: 33px;
     }
 
     #original-almond{
@@ -2025,6 +2027,7 @@ footer{
         width: 56px;
         height: 34px;
         background-position: contain;
+        margin: 0 auto;
     }
 
     .footer-information-wrwapper{
@@ -2032,5 +2035,13 @@ footer{
         text-align: center;
     }
 
+    .alert-area{
+        display: none;
+    }
+
+    .information-text p {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
 
 }
