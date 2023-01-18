@@ -59,22 +59,6 @@ function orginalLinetext() {
     observer.observe(text[58]);
 }
 
-let observer = new IntersectionObserver ((e)=>{
-    e.forEach((박스)=>{
-        if(박스.isIntersecting){
-        박스.target.classList.add();
-        } else{
-        박스.target.classList.add();
-    }
-})
-})
-
-let choiceR = document.querySelectorAll('div');
-observer.observe(choiceR[70]);
-observer.observe(choiceR[73]);
-observer.observe(choiceR[78]);
-observer.observe(choiceR[81]);
-
 function backgroundcontrol() {
     
     let observer = new IntersectionObserver ((e)=>{

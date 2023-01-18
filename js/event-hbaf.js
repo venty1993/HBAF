@@ -4,7 +4,7 @@
     const leftButton = document.getElementsByClassName('before-contents-arrow')
     const rightButton = document.getElementsByClassName('next-contents-arrow')
     
-    const count = 4;
+    const count = 3;
     let slideWith;
     let containerWidth;
     let index = 0;
@@ -20,7 +20,7 @@
         rifgtslide();
     })
 
-
+    checkWidth();
     function checkWidth() {
         containerWidth = contentsWrapper[0].clientWidth;
         slideWith = (containerWidth - (20 * (count-1))) / count;    
