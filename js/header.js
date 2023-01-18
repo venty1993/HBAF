@@ -12,6 +12,7 @@ function headerMenu() {
     
     header.addEventListener('mouseleave', ()=>{
         header.classList.remove('header-active')
+        header.classList.remove('header-back');
     })
 }
 
@@ -35,14 +36,10 @@ function scrollhead() {
     });
 
     window.addEventListener('scroll', (e)=>{
-        console.log(window.scrollY);
         if(window.scrollY > 68){
            스크롤된해더();
         }
-        else if(headerNav.addEventListener('mouseover',()=>{
-            header.style.backgroundColor = '#fcd364';
-        })){
-        }
+
         else{
             스크롤안된해더();
         }

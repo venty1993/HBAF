@@ -23,11 +23,15 @@
     checkWidth();
     function checkWidth() {
         containerWidth = contentsWrapper[0].clientWidth;
-        slideWith = (containerWidth - (20 * (count-1))) / count;    
+        slideWith = (containerWidth - (22 * (count-1))) / count;    
         for (let i = 0; i <conTents.length; i++) {
             conTents[i].style.width = `${slideWith}px`;
         }
     }
+
+    window.addEventListener('resize', () => {
+        checkWidth();
+    })
 
 
     function prevButton() {
