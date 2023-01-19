@@ -38,13 +38,14 @@ function orginalLinetext() {
     observer.observe(figure[28]);
     
     const text = document.querySelectorAll('p');
-    observer.observe(text[10]);
+    observer.observe(text[9]);
+    observer.observe(text[29]);
     observer.observe(text[30]);
     observer.observe(text[31]);
     observer.observe(text[32]);
     observer.observe(text[33]);
     observer.observe(text[34]);
-    observer.observe(text[35]);
+    observer.observe(text[45]);
     observer.observe(text[46]);
     observer.observe(text[47]);
     observer.observe(text[48]);
@@ -57,9 +58,6 @@ function orginalLinetext() {
     observer.observe(text[55]);
     observer.observe(text[56]);
     observer.observe(text[57]);
-    observer.observe(text[58]);
-    observer.observe(text[59]);
-    observer.observe(text[60]);
     
     const div = document.querySelectorAll('div');
     observer.observe(div[36]);
@@ -95,8 +93,8 @@ function backgroundcontrol() {
             })
         })
         const div = document.querySelectorAll('div');
-        observer.observe(div[71]);
-        observer.observe(div[79]);
+        observer.observe(div[73]);
+        observer.observe(div[81]);
     }
 
     function choicebackleft() {
@@ -111,9 +109,9 @@ function backgroundcontrol() {
         })
     })
     const div = document.querySelectorAll('div');
-    observer.observe(div[82]);
-    observer.observe(div[74]);
-    }
+    observer.observe(div[76]);
+    observer.observe(div[84]);
+}
 
 function carrotPlay(){
     let observer = new IntersectionObserver ((e)=>{

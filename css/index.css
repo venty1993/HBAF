@@ -103,7 +103,7 @@ body{
     background-repeat: repeat;
     width: 3000px;
     height: 2500px;
-    z-index: 200;
+    z-index: 120;
     background-color: var(--main-brown-color);
     transform: rotate(320deg);
     position: relative;
@@ -115,7 +115,7 @@ body{
     top: 0;
     width: 100%;
     left: 0;
-    z-index: 200;
+    z-index: 120;
     height: 65px;
     transition: 1s;
     overflow: hidden;
@@ -651,7 +651,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding: 0px 32px;
-    /* position: relative; */
 }
 
 .recommend-container{
@@ -677,6 +676,15 @@ body{
     width: 100%;
     overflow: hidden;
 }
+
+.injermi-almond-img{
+    transform: scaleX(-1);
+}
+
+.star-almond{
+    transform: scaleX(-1);
+}
+
 
 .recommend-text-area{
     color: var(--main-white-color);
@@ -1553,6 +1561,10 @@ footer{
         display: none;
     }
 
+    .alert-and-navershoping{
+        display: none;
+    }
+
     .navi-honeybee{
         display: none;
     }
@@ -1692,6 +1704,10 @@ footer{
 }
 
 @media screen and (max-width: 360px) {
+
+    .intro-overflow > figure{
+        width: 200px;
+    }
 
     #video-place > video{
         height: 100vh;
@@ -1945,6 +1961,15 @@ footer{
         transform: translate(0%, 0%);
     }
 
+    .text-left {
+    padding-right: 20px;
+    }
+
+    .text-medium{
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+
     .banner-area p{
         font-size: 15px;
     }
@@ -2035,6 +2060,10 @@ footer{
         text-align: center;
     }
 
+    .footer-information-wrwapper p{
+        letter-spacing: -1px;
+    }
+
     .alert-area{
         display: none;
     }
@@ -2042,6 +2071,10 @@ footer{
     .information-text p {
         font-size: 10px;
         margin-bottom: 8px;
+    }
+
+    footer{
+        padding: 24px 16px;
     }
 
 }
