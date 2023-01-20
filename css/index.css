@@ -11,6 +11,7 @@
     --carrot-color : #ec5d3f;
     --blue-color: #0d4daf;
     --font-black:#222;
+    --event-gray-color: #767676;
     /* footer-color */
     --footer-color : #353535;
     --footer-font-color: #bdbdbd;
@@ -242,10 +243,13 @@ body{
 
 #video-place {
     position: relative;
+    height: 100vh;
 }
 
 #video-place > video{
     width: 100%;
+    object-fit: cover;
+    height: 100%;
     display: block;
 }
 
@@ -279,6 +283,7 @@ body{
     overflow: hidden;
     background-color: var(--main-orange-color);
     padding: 160px 0;
+    box-sizing: border-box;
 }
 
 .over-flow-hiden{
@@ -363,7 +368,7 @@ body{
 }
 
 .explane-letter-wrapper > p{
-    font-size: 20px;
+    font-size: 16px;
     color: var(--main-brown-color);
     margin-top: 20px;
 }
@@ -371,7 +376,7 @@ body{
 .explane-letter-wrapper > p::after{
     content: '';
     display: block;
-    width: 100%;
+    width: 80%;
     height: 2px;
     background-color: var(--main-brown-color);
     margin-top: 12px;
@@ -452,7 +457,6 @@ body{
     font-size: 80px;
     font-weight: bold;
     color: var(--main-yello-color2);
-    width: var(--container-size);
     margin: 0 auto;
 }
 
@@ -481,9 +485,8 @@ body{
 
 .original-almond-linebackground > p{
     margin: 0 auto;
-    width: var(--container-size);
     padding-top: 30px;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 168%;
     color: var(--main-brown-color);
     opacity: 0;
@@ -555,7 +558,7 @@ body{
 }
 
 .honeybutter-almond-explane{
-    font-size: 20px;
+    font-size: 16px;
     color: var(--main-brown-colorhealthy);
     padding-top: 16px;
     padding-left: 10%;
@@ -573,7 +576,7 @@ body{
 .original-fly-bee{
     position: absolute;
     top: 0;
-    right: 6%;
+    right: 15%;
     animation-name: honeybee;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -588,17 +591,6 @@ body{
     padding-top: 64px;
     padding-left: 10%;
 }
-
-/* .original-text{
-    color: var(--main-orange-color);
-    opacity: 40%;
-    font-size: 120px;
-    font-weight: bold;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    transform: translate(-5%, -10%);
-} */
 
 #recommend-area{
     max-width: var(--container-size);
@@ -677,6 +669,11 @@ body{
     overflow: hidden;
 }
 
+.recommend-container img{
+    height: 100%;
+    object-fit: contain;
+}
+
 .injermi-almond-img{
     transform: scaleX(-1);
 }
@@ -694,7 +691,7 @@ body{
     flex-basis: 60%;
 }
 .hashtag{
-    font-size: 22px;
+    font-size: 16px;
     line-height: 150%;
 }
 
@@ -707,7 +704,7 @@ body{
 .recommend-name{
     line-height: 115%;
     margin-top: 32px;
-    font-size: 40px;
+    font-size: 23px;
 }
 
 .goto-recommend{
@@ -875,9 +872,9 @@ body{
 
 .event-explane-text {
     font-size: 15px;
-    color: var(--footer-font-color);
+    color: var(--event-gray-color);
     padding-top: 16px;
-    line-height: 32px;
+    line-height: 24px;
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -929,7 +926,7 @@ body{
 
 .explane-character{
     color: var(--main-yello-color2);
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     line-height: 150%;
     opacity: 0;
@@ -939,7 +936,7 @@ body{
 .explane-choice-character{
     margin-top: 16px;
     margin-bottom: 16px;
-    font-size: 30px;
+    font-size: 16px;
     line-height: 155%;
     color: var(--main-white-color);
     opacity: 0;
@@ -990,7 +987,7 @@ body{
 }
 
 .more{
-    font-size: 20px;
+    font-size: 16px;
     color: var(--main-brown-color);
     font-weight: bold;
     position: relative;
@@ -1000,8 +997,8 @@ body{
 .more::after{
     content: '';
     display: block;
-    width: 13px;
-    height: 13px;
+    width: 8px;
+    height: 8px;
     border-top: 2px solid var(--main-brown-color);
     border-right: 2px solid var(--main-brown-color);
     rotate: 45deg;
@@ -1075,7 +1072,7 @@ body{
 
 .chrancter-name{
     display: flex;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 800;
     color: var(--main-brown-color);
     align-items: flex-end;
@@ -1448,6 +1445,10 @@ footer{
         justify-content: center;
     }
     
+    .explane-honeybee-wrapper{
+        left: 10%;
+    }
+
     .explane-honeybeeP{
         width: 600px;
     }
@@ -1545,13 +1546,6 @@ footer{
         width: 260px;
     }
 
-    .explane-character{
-        font: 35px;
-    }
-
-    .explane-choice-character{
-        font-size: 25px;
-    }
 
 }
 
@@ -1624,6 +1618,7 @@ footer{
         max-width: 770px;
     }
 
+
     #recommend-area{
         max-width: 770px;
     }
@@ -1637,11 +1632,12 @@ footer{
         flex-basis: 80%;
     }
     .hashtag{
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .recommend-name{
         letter-spacing: -1px;
+        font-size: 27px;
     }
 
     .goto-recommend{
@@ -1650,7 +1646,10 @@ footer{
 
     .recommend-container > figure{
         flex-basis: 35%;
-        transform: translate(0px, 60px);
+    }
+
+    .banner-area{
+        gap: 0px;
     }
 
     .banner-area p{
@@ -1658,13 +1657,8 @@ footer{
     }
 
     .explane-character{
-        font-size: 30px;
         letter-spacing: -1px;
     }
-
-    .explane-choice-character{
-        font-size: 20px;
-        }
     
     .coice-contents{
         gap: 97px;
@@ -1703,6 +1697,75 @@ footer{
 
 }
 
+@media screen and (max-width : 660px) {
+    .banner-area{
+        gap: 0px;
+    }
+
+    .original-fly-bee{
+        display: none;
+    }
+    
+
+    .carrot-almond-wrapper{
+        padding-right: 20px;
+        width: 150px;
+        height: 190px;
+    }
+
+    .carrot-cake-almond{
+        width: 150px;
+        bottom: -107px;
+    }
+    
+    .carrot-cake-bottom{
+        width: 150px;
+        bottom: -22%;
+    }
+
+    .hashtag{
+        font-size: 15px;
+    }
+
+    .recommend-name{
+        font-size: 30px;
+    }
+
+    .choice-text{
+        font-size: 60px;
+    }
+
+    .choice-right .chrancter-name{
+        left: 27%;
+    }
+
+    .choice-left .choice-chracter-area > figure{
+        width: 250px;
+        top: 20%;
+        right: -27%;
+    }
+
+    .choice-right .choice-chracter-area > figure{
+        top: 18%;
+        right: 0;
+    }
+
+
+    .three-chracter figure:nth-child(1){
+        width: 270px;
+    }
+
+    .three-chracter figure:nth-child(2){
+        width: 220px;
+    }
+
+    .three-chracter figure:nth-child(3){
+        width: 210px;
+    }
+}
+
+
+
 @media screen and (max-width: 360px) {
 
     .intro-overflow > figure{
@@ -1711,7 +1774,7 @@ footer{
 
     #video-place > video{
         height: 100vh;
-        width: auto;
+        object-fit: cover;
     }
 
     .header-letter{
@@ -1852,7 +1915,6 @@ footer{
     }
 
     .original-almond-linebackground > p{
-        font-size: 12px;
         margin-left: 16px;
     }
 
@@ -1957,9 +2019,6 @@ footer{
         padding: 0px 16px;
     }
 
-    .recommend-container > figure{
-        transform: translate(0%, 0%);
-    }
 
     .text-left {
     padding-right: 20px;
@@ -1980,14 +2039,6 @@ footer{
 
     .choice-explane-text-explane{
         font-size: 18px;
-    }
-
-    .explane-character{
-        font-size: 15px;
-    }
-
-    .explane-choice-character{
-        font-size: 12px;
     }
 
     .more{
@@ -2025,6 +2076,8 @@ footer{
 
     .choice-left .choice-chracter-area > figure{
         top: 24%;
+        width: 100px;
+        right: 0;
     }
 
     .more::after{

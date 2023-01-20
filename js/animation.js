@@ -132,7 +132,7 @@ function intro() {
     const body= document.querySelector('body');    
     
     setTimeout(function(){
-        body.style.overflow = 'scroll';
+        body.style.overflow = 'initial';
     },5000);
 
 }

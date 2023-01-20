@@ -32,9 +32,9 @@ function makeSlide(pcSlideCount,mobileSlideCount) {
      checkWidth();
      function checkWidth() {
          if(window.innerWidth > 800){
-             count = pcSlideCount ;
+            count = pcSlideCount ;
          }else { 
-             count = mobileSlideCount;
+            count = mobileSlideCount;
          }
          containerWidth = contentsWrapper[0].clientWidth;
          slideWith = (containerWidth - (22 * (count-1))) / count;    
@@ -49,8 +49,8 @@ function makeSlide(pcSlideCount,mobileSlideCount) {
 
 
      function leftslide() {
-         if(index > 0) {
-
+         if(index < 0) {
+index=0
          }
          index--;
          contentsSize();
@@ -58,9 +58,10 @@ function makeSlide(pcSlideCount,mobileSlideCount) {
      }
 
      function rifgtslide() {
-         if( index < slidewrapper.childElementCount - count){
-             index++
+         if( index > slidewrapper[0].childElementCount - count-1){
+            index=slidewrapper[0].childElementCount - count -1
          }
+         console.log(slidewrapper[0].childElementCount)
          index++;
          contentsSize();
      }
