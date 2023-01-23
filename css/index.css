@@ -221,12 +221,20 @@ body{
     right: 20px;
 }
 
-.alert-and-navershoping a{
+.shopping-naver{
+    color: var(--main-white-color);
+}
+
+.get-alert{
     color: var(--font-black);
+}
+
+.alert-and-navershoping a{
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
 }
+
 
 .alert-button{
     background-color: rgba(255, 255, 255, 0.50);
@@ -236,6 +244,7 @@ body{
     position: relative;
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0 ,25%);
 }
+
 
 .mobile-hmaburger{
     display: none;
@@ -738,7 +747,6 @@ body{
     justify-content: center;
     align-items: center;
     padding-bottom: 24px;
-    gap: 32px;
 }
 
 .carrot-almond-wrapper{
@@ -777,15 +785,15 @@ body{
 
 
 .banner-left-text{
-    font-size: 35px;
     color: var(--carrot-color);
     font-weight: 800;
 }
+
 .banner-area p{
     padding-top: 30px;
     opacity: 0;
     transition: 2s;
-    font-size: 16px;
+    font-size: 25px;
 
 }
 
@@ -1709,8 +1717,80 @@ footer{
 }
 
 @media screen and (max-width : 660px) {
+    
+    nav{
+        display: none;
+    }
+    
+    .header-wrapper{
+        border-bottom: none;
+    }
+
+    .header-wrapper{
+        justify-content: flex-end;
+    }
+
+    .mobile-hmaburger{
+        display: block;
+        position: relative;
+        height: 30px;
+    }
+
+    .middle{
+        width: 40px;
+        height: 3px;
+        background-color: var(--main-white-color);
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+
+    .mobile-hmaburger::before{
+        display: block;
+        content: '';
+        width: 40px;
+        height: 3px;
+        background-color: var(--main-white-color);
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .mobile-hmaburger::after{
+        display: block;
+        content: '';
+        width: 40px;
+        height: 3px;
+        background-color: var(--main-white-color);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
+    .explane-honeybee{
+        width: 350px;
+    }
+
+    .explane-honeybee-lastimg{
+        width: 150px;
+    }
+
+    .honeybutter-almond-wrapper{
+        flex-direction: column;
+    }
+
+    .line-text-wrapper{
+        padding-top: 32px;
+        transform: none;
+    }
+
     .banner-area{
         gap: 0px;
+    }
+
+    .banner-area p{
+        font-size: 18px;
     }
 
     .original-fly-bee{
@@ -1749,6 +1829,10 @@ footer{
         flex-flow: column-reverse;
     }
 
+    .event-area-wrapper > h2{
+        font-size: 60px;
+    }
+
     .chracter-background{
         height: 200px;
     }
@@ -1758,7 +1842,7 @@ footer{
     }
 
     .choice-content-wrapper{
-        width: 580px;
+        width: 500px;
         margin: 0 auto;
     }
      
@@ -1813,6 +1897,7 @@ footer{
 
 
 @media screen and (max-width: 360px) {
+
 
     .intro-overflow > figure{
         width: 200px;
@@ -1943,17 +2028,7 @@ footer{
     }
 
     .honeybutter-almond-wrapper{
-        padding-top: 24px;
-    }
-
-    .honeybutter-almond-wrapper > figure{
-        flex-basis: auto;
-        transform: translateX(-20%);
-        padding-top: 0px;
-    }
-
-    .line-text-wrapper{
-        transform: translateX(-30%);
+        padding-left: 16px;
     }
 
     .honey-butter-explane-area{
@@ -1990,6 +2065,7 @@ footer{
     }
 
     .banner-area p{
+    font-size: 15px;
     padding: 0px;
     margin-top: 16px;
     }
@@ -2044,7 +2120,7 @@ footer{
     }
 
     .ori-and-moreview-wrapper{
-        margin: 16px;
+        margin: 24px;
         padding: 0px;
     }
 
