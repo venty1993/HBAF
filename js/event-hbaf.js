@@ -1,6 +1,6 @@
-makeSlide(3,2)
+makeSlide(3,2,1)
 
-function makeSlide(pcSlideCount,mobileSlideCount) {
+function makeSlide(pcSlideCount, tabletSlideCount,mobileSlideCount) {
         const conTents = document.getElementsByClassName('contents');
         const contentsWrapper = document.getElementsByClassName('event-slidewrapper');
         const slidewrapper = document.getElementsByClassName('contents-wrapper');
@@ -31,9 +31,11 @@ function makeSlide(pcSlideCount,mobileSlideCount) {
 
      checkWidth();
      function checkWidth() {
-         if(window.innerWidth > 800){
+         if(window.innerWidth > 1400){
             count = pcSlideCount ;
-         }else { 
+         }else if (window.innerWidth > 800) {
+            count = tabletSlideCount;
+         } else{
             count = mobileSlideCount;
          }
          containerWidth = contentsWrapper[0].clientWidth;

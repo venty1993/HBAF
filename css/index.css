@@ -464,6 +464,7 @@ body{
     max-width: var(--container-size);
     position: relative;
     margin: 0 auto;
+    padding-left: 32px;
 }
 
 
@@ -496,11 +497,11 @@ body{
 
 .honeybutter-almond-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     width: 100%;
     max-width: var(--container-size);
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .honeybutter-almond-wrapper > figure{
@@ -588,8 +589,7 @@ body{
 }
 
 .ori-and-moreview-wrapper{
-    padding-top: 64px;
-    padding-left: 10%;
+    padding: 24px 64px;
 }
 
 #recommend-area{
@@ -746,6 +746,7 @@ body{
     overflow: hidden;
     width: 225px;
     height: 250px;
+    padding: 0px 24px;
 }
 
 .carrot-cake-almond{
@@ -784,6 +785,7 @@ body{
     padding-top: 30px;
     opacity: 0;
     transition: 2s;
+    font-size: 16px;
 
 }
 
@@ -1648,20 +1650,29 @@ footer{
         flex-basis: 35%;
     }
 
-    .banner-area{
+    /* .banner-area{
         gap: 0px;
     }
 
-    .banner-area p{
-        font-size: 25px;
+    .choice-right{
+        flex-flow: column-reverse;
     }
+
+    .chracter-background{
+        height: 200px;
+    }
+
+    .choice-left .choice-chracter-area > figure{
+        width: 220px;
+    }
+     
+    .coice-contents{
+        gap: 24px;
+        flex-direction: column;
+    } */
 
     .explane-character{
         letter-spacing: -1px;
-    }
-    
-    .coice-contents{
-        gap: 97px;
     }
 
     .chrancter-name{
@@ -1708,7 +1719,6 @@ footer{
     
 
     .carrot-almond-wrapper{
-        padding-right: 20px;
         width: 150px;
         height: 190px;
     }
@@ -1731,6 +1741,39 @@ footer{
         font-size: 30px;
     }
 
+    .banner-area{
+        gap: 0px;
+    }
+
+    .choice-right{
+        flex-flow: column-reverse;
+    }
+
+    .chracter-background{
+        height: 200px;
+    }
+
+    .choice-left .choice-chracter-area > figure{
+        width: 220px;
+    }
+
+    .choice-content-wrapper{
+        width: 580px;
+        margin: 0 auto;
+    }
+     
+    .coice-contents{
+        gap: 24px;
+    }
+
+    .choice-right{
+        flex-flow: column-reverse;
+    }
+
+    .choice-left{
+        flex-direction: column;
+    }
+
     .choice-text{
         font-size: 60px;
     }
@@ -1739,15 +1782,18 @@ footer{
         left: 27%;
     }
 
+    .choice-right .choice-chracter-area{
+        letter-spacing: 20%;
+    }
+    
+
     .choice-left .choice-chracter-area > figure{
         width: 250px;
         top: 20%;
-        right: -27%;
     }
 
     .choice-right .choice-chracter-area > figure{
         top: 18%;
-        right: 0;
     }
 
 
@@ -1914,6 +1960,10 @@ footer{
         padding-top: 16px;
     }
 
+    .original-almond-linebackground{
+        padding-left: 0;
+    }
+
     .original-almond-linebackground > p{
         margin-left: 16px;
     }
@@ -1937,17 +1987,18 @@ footer{
 
     .banner-area{
         padding: 16px;
-        gap: 16px;
     }
 
     .banner-area p{
-        padding-top: 16px;
+    padding: 0px;
+    margin-top: 16px;
     }
 
     .carrot-almond-wrapper{
         width: 96px;
         height: 110px;
         flex-shrink: 0;
+        padding: 0px 14px;
     }
 
     .carrot-cake-bottom{
@@ -2002,7 +2053,7 @@ footer{
     }
 
     .recommend-name{
-        font-size: 20px;
+        font-size: 18px;
         margin-top: 12px;
     }
 
@@ -2029,9 +2080,6 @@ footer{
         padding-right: 0px;
     }
 
-    .banner-area p{
-        font-size: 15px;
-    }
 
     .choice-explane-text > h2{
         font-size: 24px;
@@ -2051,7 +2099,15 @@ footer{
 
     .choice-inner-container{
         max-width: 328px;
+    }
 
+    .choice-content-wrapper{
+        width: 328px;
+        padding-bottom: 64px;
+    }
+
+    .chracter-background{
+        height: 90px;
     }
 
     .coice-contents{
@@ -2062,12 +2118,28 @@ footer{
         margin: 10px 0px;
     }
 
+    .explane-character{
+        font-size: 24px;
+    }
+
     .chrancter-name{
         font-size: 20px;
     }
 
     .choice-chracter-area figure{
-        width: 100px;
+        width: 110px;
+    }
+
+    .choice-left .chrancter-name{
+        left: 50%;
+    }
+
+    .choice-left .choice-chracter-area{
+        transform: translateX(-25%);
+    }
+
+    .choice-right .choice-chracter-area{
+        transform: translateX(25%);
     }
 
     .choice-right .choice-chracter-area > figure{
@@ -2079,6 +2151,7 @@ footer{
         width: 100px;
         right: 0;
     }
+
 
     .more::after{
         width: 5px;
