@@ -4,6 +4,7 @@ carrotPlay();
 choicebackleft();
 choicebackright();
 intro();
+mobileMenu();
 
 
 function orginalLinetext() {
@@ -29,13 +30,13 @@ function orginalLinetext() {
     observer.observe(lineexplane[2]);
     
     const figure = document.querySelectorAll('figure')
-    observer.observe(figure[10]);
     observer.observe(figure[11]);
-    observer.observe(figure[24]);
+    observer.observe(figure[12]);
     observer.observe(figure[25]);
     observer.observe(figure[26]);
     observer.observe(figure[27]);
     observer.observe(figure[28]);
+ 
     
     const text = document.querySelectorAll('p');
     observer.observe(text[9]);
@@ -60,10 +61,10 @@ function orginalLinetext() {
     observer.observe(text[57]);
     
     const div = document.querySelectorAll('div');
-    observer.observe(div[36]);
-    observer.observe(div[38]);
+    observer.observe(div[39]);
     observer.observe(div[41]);
-    observer.observe(div[43]);
+    observer.observe(div[44]);
+    observer.observe(div[46]);
 }
 
 
@@ -93,8 +94,8 @@ function backgroundcontrol() {
             })
         })
         const div = document.querySelectorAll('div');
-        observer.observe(div[73]);
-        observer.observe(div[81]);
+        observer.observe(div[74]);
+        observer.observe(div[82]);
     }
 
     function choicebackleft() {
@@ -109,8 +110,8 @@ function backgroundcontrol() {
         })
     })
     const div = document.querySelectorAll('div');
-    observer.observe(div[76]);
-    observer.observe(div[84]);
+    observer.observe(div[77]);
+    observer.observe(div[85]);
 }
 
 function carrotPlay(){
@@ -128,12 +129,29 @@ function carrotPlay(){
     observer.observe(carrotimg[18]);
 }
 
+
 function intro() {
     const body= document.querySelector('body');    
     
     setTimeout(function(){
         body.style.overflow = 'initial';
     },5000);
-
 }
 
+
+function mobileMenu() {
+    
+    const hamburger = document.querySelector('.mobile-hmaburger');
+    const mobileMenuback = document.querySelector('.mobile-hmaburger-menu');
+    const mobileClosebutton = document.querySelector('.close-button');
+    const clickbar = document.querySelectorAll('span');
+    
+    hamburger.addEventListener('click' , ()=>{
+        mobileMenuback.classList.add('click-close')
+    })
+    
+    mobileClosebutton.addEventListener('click', ()=>{
+        mobileMenuback.classList.remove('click-close')
+    })
+    
+}

@@ -179,7 +179,6 @@ body{
 
 .menu{
     position: relative;
-    /*  */
     display: inline-block;
 }
 
@@ -248,7 +247,22 @@ body{
 
 .mobile-hmaburger{
     display: none;
+    position: relative;
 }
+
+.mobile-hmaburger-menu{
+    display: none;
+}
+
+/* .cross-left{
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.cross-right{
+    top: 50%;
+    transform: rotate(-45deg);
+} */
 
 #video-place {
     position: relative;
@@ -385,7 +399,7 @@ body{
 .explane-letter-wrapper > p::after{
     content: '';
     display: block;
-    width: 80%;
+    width: 100%;
     height: 2px;
     background-color: var(--main-brown-color);
     margin-top: 12px;
@@ -466,7 +480,6 @@ body{
     font-size: 80px;
     font-weight: bold;
     color: var(--main-yello-color2);
-    margin: 0 auto;
 }
 
 .original-almond-linebackground{
@@ -528,6 +541,7 @@ body{
     flex-basis: 60%;
     max-width: 640px;
     transform: translateX(-5%);
+    padding-top: 64px;
 }
 
 .line{
@@ -1424,7 +1438,6 @@ footer{
     }
     100%{
         rotate: 0;
-        /* transform: translate(-50%, -50%) scale(1.5); */
     }
 }
 
@@ -1658,27 +1671,6 @@ footer{
         flex-basis: 35%;
     }
 
-    /* .banner-area{
-        gap: 0px;
-    }
-
-    .choice-right{
-        flex-flow: column-reverse;
-    }
-
-    .chracter-background{
-        height: 200px;
-    }
-
-    .choice-left .choice-chracter-area > figure{
-        width: 220px;
-    }
-     
-    .coice-contents{
-        gap: 24px;
-        flex-direction: column;
-    } */
-
     .explane-character{
         letter-spacing: -1px;
     }
@@ -1731,9 +1723,10 @@ footer{
     }
 
     .mobile-hmaburger{
+        width: 45px;
+        height: 30px;
         display: block;
         position: relative;
-        height: 30px;
     }
 
     .middle{
@@ -1746,9 +1739,7 @@ footer{
         right: 0;
     }
 
-    .mobile-hmaburger::before{
-        display: block;
-        content: '';
+    .mobile-menu-top{
         width: 40px;
         height: 3px;
         background-color: var(--main-white-color);
@@ -1757,9 +1748,7 @@ footer{
         right: 0;
     }
 
-    .mobile-hmaburger::after{
-        display: block;
-        content: '';
+    .mobile-menu-bottom{
         width: 40px;
         height: 3px;
         background-color: var(--main-white-color);
@@ -1767,13 +1756,107 @@ footer{
         bottom: 0;
         right: 0;
     }
-    
-    .explane-honeybee{
-        width: 350px;
+
+    .mobile-hmaburger-menu{
+        z-index: 200;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--main-white-color);
+        padding: 20px;
+        box-sizing: border-box;
+        transition: 0.5s;
     }
 
-    .explane-honeybee-lastimg{
-        width: 150px;
+    .mobile-menu-logo-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile-logo{
+        position: relative;
+        width: 90px;
+        height: 40px;
+    }
+
+    .close-button{
+        position: relative;
+        width: 40px;
+    }
+
+    .mobile-close-top{
+        height: 2px;
+        width: 30px;
+        background-color: var(--event-gray-color);
+        rotate: 45deg;
+        transform-origin: bottom;
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+    .mobile-close-bottm{
+        height: 2px;
+        width: 30px;
+        background-color: var(--event-gray-color);
+        rotate: -45deg;
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+
+    .click-close{
+        left: 0;
+    }
+
+    .mobile-menu{
+        padding-top: 25%;
+    }
+
+    .mobile-menu li{
+        margin-bottom: 35px;
+    }
+
+    .mobile-menu li>a{
+        color: #767676;
+    }
+    
+    #explane-hbaf{
+        padding: 16px;
+    }
+
+    .explane-box{
+        width: 100%;
+        rotate: 0deg;
+    }
+
+    .explane-honeybee-wrapper{
+        display: none;
+    }
+
+    .over-flow-hiden{
+        padding-left: 0px;
+    }
+
+    .honey-bee-wrapper{
+        display: none;
+    }
+
+    .explane-text-wrapper{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 16px;
+    }
+
+    .explane-letter-wrapper > p{
+        font-size: 16px;
+        text-align: start;
+    }
+    
+    .explane-logo-letter-wrapper{
+        gap: 10px;
     }
 
     .honeybutter-almond-wrapper{
@@ -1783,6 +1866,10 @@ footer{
     .line-text-wrapper{
         padding-top: 32px;
         transform: none;
+    }
+
+    .small-honeybee{
+        display: none;
     }
 
     .banner-area{
@@ -1842,8 +1929,9 @@ footer{
     }
 
     .choice-content-wrapper{
-        width: 500px;
+        max-width: 500px;
         margin: 0 auto;
+        padding: 0px 16px;
     }
      
     .coice-contents{
@@ -1880,18 +1968,25 @@ footer{
         top: 18%;
     }
 
+    .three-chracter{
+        height: 600px;
+    }
 
     .three-chracter figure:nth-child(1){
-        width: 270px;
+        width: 200px;
     }
 
     .three-chracter figure:nth-child(2){
-        width: 220px;
+        width: 200px;
     }
 
     .three-chracter figure:nth-child(3){
-        width: 210px;
+        width: 200px;
     }
+}
+
+@media screen and (max-width : 555px) {
+    
 }
 
 
@@ -1942,8 +2037,15 @@ footer{
         display: none;
     }
 
+    #explane-hbaf{
+        padding: 160px 0px;
+        padding-left: 30px;
+    }
+
+
     .explane-box{
         width: 650px;
+        rotate: -4deg;
     }
     
     .explane-honeybee{
@@ -1991,8 +2093,9 @@ footer{
     }
 
     .honey-bee-wrapper{
+        display: block;
         width: 70px;
-        right: 80px;
+        right: 15%;
     }
 
     .explane-text-wrapper .more-view{
@@ -2000,13 +2103,15 @@ footer{
     }
 
     .explane-honeybee-wrapper{
+        display: block;
         left: 17%;
         bottom: 0;
     }
 
     .small-honeybee{
+        display: block;
         width: 140px;
-        right: 95px;
+        right: 22%;
         bottom: -165px;
     }
 
@@ -2178,7 +2283,8 @@ footer{
     }
 
     .choice-content-wrapper{
-        width: 328px;
+        max-width: 328px;
+        padding: 0px 16px;
         padding-bottom: 64px;
     }
 
