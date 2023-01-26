@@ -31,7 +31,7 @@ function makeSlide(pcSlideCount, tabletSlideCount,mobileSlideCount) {
 
      checkWidth();
      function checkWidth() {
-         if(window.innerWidth > 1400){
+         if(window.innerWidth > 1200){
             count = pcSlideCount ;
          }else if (window.innerWidth > 800) {
             count = tabletSlideCount;

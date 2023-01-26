@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .hamberger {
+            width: 24px;
+            height: 24px;
+            background-color: aqua;
+            position: relative;
+        }
+
+        .hamberger > span {
+            width: 100%;
+            height: 2px;
+            display: block;
+            background-color: #232323;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.5s;
+        }
+
+        .hamberger > span:first-child {
+            top: 0;
+            transform: none;
+        }
+
+        .hamberger > span:last-child {
+            top: 100%;
+            transform: translateY(-50%);
+        }
+
+        .icon:hover span:first-child {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+
+        }
+
+        .icon:hover span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .icon:hover span:last-child {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#" class="icon">
+
+        <div class="hamberger">
+            <span></span><span></span><span></span>
+        </div>
+    </a>
+</body>
+</html>

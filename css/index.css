@@ -150,7 +150,7 @@ body{
 }
 
 .header-active{
-    height: 290px;
+    height: 295px;
     background-color: var(--main-yello-color2);
 }
 
@@ -167,6 +167,10 @@ body{
     background-color: var(--main-yello-color2);
 }
 
+.menu > .header-menu-active{
+    color: var(--main-brown-color);
+}
+
 
 .menu-wrapper{
     display: flex;
@@ -178,10 +182,6 @@ body{
 .menu{
     position: relative;
     display: inline-block;
-}
-
-.header-menu-active{
-    color: var(--main-brown-color);
 }
 
 .menu a {
@@ -262,7 +262,6 @@ body{
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0 ,25%);
 }
 
-
 .mobile-hmaburger{
     display: none;
     position: relative;
@@ -308,7 +307,7 @@ body{
 .navi-honey{
     width: 220px;
     position: absolute;
-    top: 90px;
+    top: 94px;
     left: 10%;
 }
 
@@ -545,7 +544,7 @@ body{
 }
 
 .honeybutter-almond-wrapper > figure{
-    padding-top: 30px;
+    padding-top: 24px;
     max-width: 360px;
     flex-basis: 40%;
 }
@@ -602,7 +601,7 @@ body{
 .honeybutter-almond-explane{
     font-size: 16px;
     color: var(--main-brown-colorhealthy);
-    padding-top: 16px;
+    padding-top: 24px;
     padding-left: 10%;
     opacity: 0;
     transition: all 2s;
@@ -739,8 +738,8 @@ body{
 .recommend-line-wrapper{
     display: flex;
     flex-wrap: nowrap;
-    gap: 22px;
-    padding-top: 22px;
+    gap: 24px;
+    padding-top: 24px;
 }
 .recommend-name{
     line-height: 115%;
@@ -770,7 +769,6 @@ body{
 #banner-container{
     padding-top: 64px;
     margin-top: 0 auto;
-    margin: 0 auto;
 }
 
 .banner-area{
@@ -1487,7 +1485,7 @@ footer{
     }
     
     .explane-honeybee-wrapper{
-        left: 10%;
+        left: 12%;
     }
 
     .explane-honeybeeP{
@@ -1497,9 +1495,6 @@ footer{
 }
 
 @media screen and (max-width:1200px) {
-    .explane-honeybee-wrapper{
-        left: 10%;
-    }
 
     .navi-honey{
         left: 2%;
@@ -1740,40 +1735,52 @@ footer{
         justify-content: flex-end;
     }
 
-    .mobile-hmaburger{
-        width: 45px;
-        height: 30px;
-        display: block;
-        position: relative;
+    .mobile-hmaburger a{
+        width: 48px;
+        height: 48px;
     }
 
-    .middle{
-        width: 40px;
-        height: 3px;
-        background-color: var(--main-white-color);
+    .mobile-hmaburger{
         display: block;
+        width: 28px;
+        height: 28px;
+        position: relative;
+    }
+    
+    .mobile-hmaburger span{
+        display: block;
+        height: 2px;
         position: absolute;
+        background-color: var(--main-white-color);
         top: 50%;
-        right: 0;
+        transform: translateY(-50%);
+        transition: 0.5s;
     }
 
     .mobile-menu-top{
-        width: 40px;
-        height: 3px;
-        background-color: var(--main-white-color);
-        position: absolute;
         top: 0;
-        right: 0;
+        transform: none;
+    }
+    
+    .mobile-menu-bottom{
+        top: 100%;
+        transform: translateY(-50%);
+    }
+    
+    .mobile-hmaburger:hover .mobile-menu-top{
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    
+    .mobile-hmaburger:hover .middle{
+        opacity: 0;
+    }
+        
+    .mobile-hmaburger:hover .mobile-menu-bottom{ 
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
     }
 
-    .mobile-menu-bottom{
-        width: 40px;
-        height: 3px;
-        background-color: var(--main-white-color);
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
 
     .mobile-hmaburger-menu{
         z-index: 200;
@@ -1789,6 +1796,10 @@ footer{
         transition: 0.5s;
     }
 
+    .choice-explane-text-explane .mobile-hide{
+        display: none;
+    }
+
     .mobile-menu-logo-wrapper{
         display: flex;
         justify-content: space-between;
@@ -1800,7 +1811,7 @@ footer{
         height: 40px;
     }
 
-    .close-button{
+    /* .close-button{
         position: relative;
         width: 40px;
     }
@@ -1823,7 +1834,7 @@ footer{
         position: absolute;
         top: 50%;
         right: 0;
-    }
+    } */
 
     .click-close{
         left: 0;
@@ -1882,7 +1893,6 @@ footer{
     }
 
     .line-text-wrapper{
-        padding-top: 32px;
         transform: none;
     }
 
