@@ -154,8 +154,6 @@ body{
     background-color: var(--main-yello-color2);
 }
 
-
-
 .hide-header{
     transform: translateY(-100%);
 }
@@ -182,11 +180,31 @@ body{
     display: inline-block;
 }
 
+.header-menu-active{
+    color: var(--main-brown-color);
+}
+
 .menu a {
     color: var(--main-white-color);
     font-size: 20px;
     font-weight: 800;
 }
+
+.menu a::after{
+    display: block;
+    content: '';
+    width: 0%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--brown-color);
+    transition: 1s;
+    margin-top: 8px;
+}
+
+.menu a:hover::after{
+    width: 100%;
+}
+
 
 .under-menu li>a {
     font-size: 13px;
@@ -1985,8 +2003,39 @@ footer{
     }
 }
 
-@media screen and (max-width : 555px) {
+@media screen and (max-width : 440px) {
+    .carrot-almond-wrapper{
+        padding: 0;
+        height: 140px;
+    }
+
+    .banner-area p{
+        font-size: 16px;
+    }
+
+    .carrot-cake-almond{
+        width: 140px;
+    }
+
+    .carrot-cake-bottom{
+        width: 130px;
+    }
+
+    .text-medium{
+        padding-right: 0;
+    }
+
+    .text-rigtt{
+        padding-left: 0;
+    }
+
+    .text-left{
+        padding-right: 0;
+    }
     
+    .text-left{
+        padding: 0px 16px;
+    }
 }
 
 

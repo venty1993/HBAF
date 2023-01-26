@@ -1,18 +1,28 @@
 headerMenu();
 scrollhead();
 
-
+const menuText = document.querySelectorAll('a');
 function headerMenu() {
     const header = document.querySelector('.hbaf-header');
     const headerNav = document.querySelector('.menu-tittle-wrapper');
     headerNav.addEventListener('mouseenter', ()=> {
         header.classList.add('header-active');
         header.classList.add('header-back');
+        menuText[1].classList.add('header-menu-active');
+        menuText[4].classList.add('header-menu-active');
+        menuText[8].classList.add('header-menu-active');
+        menuText[12].classList.add('header-menu-active');
+        menuText[20].classList.add('header-menu-active');
     })
     
     header.addEventListener('mouseleave', ()=>{
         header.classList.remove('header-active')
         header.classList.remove('header-back');
+        menuText[1].classList.remove('header-menu-active');
+        menuText[4].classList.remove('header-menu-active');
+        menuText[8].classList.remove('header-menu-active');
+        menuText[12].classList.remove('header-menu-active');
+        menuText[20].classList.remove('header-menu-active');
     })
 }
 
