@@ -182,11 +182,12 @@ body{
 .menu{
     position: relative;
     display: inline-block;
+    padding-top: 5px;
 }
 
 .menu a {
     color: var(--main-white-color);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 800;
 }
 
@@ -220,12 +221,19 @@ body{
     padding-top: 14px;
 }
 
+.naver:hover{
+    box-shadow: 0px 2px 10px 0 rgba(33, 197, 49 ,54%);
+}
+
 .naver{
-    background-color: var(--main-green-color);
+    background-color: #15ce60 ;
     width: 80px;
     height: 30px;
     display: flex;
     justify-content: center;
+    border: 1px soild #15c654;
+    border-radius: 2px;
+    font-weight: 700;
 }
 
 .naver a{
@@ -250,21 +258,25 @@ body{
     right: 20px;
 }
 
-.shopping-naver{
-    color: var(--main-white-color);
+.get-alert{
+    color: var(--font-black);
 }
 
-.get-alert{
+.alert-button a{
     color: var(--font-black);
 }
 
 .alert-and-navershoping a{
     position: absolute;
+    font-size: 11px;
     top: 50%;
     transform: translate(0%, -50%);
-    color: var(--font-black);
 }
 
+
+.alert-button:hover{
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0 ,15%);
+}
 
 .alert-button{
     background-color: rgba(255, 255, 255, 0.50);
@@ -272,7 +284,6 @@ body{
     border-radius: 30px;
     padding: 15px 0px;
     position: relative;
-    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0 ,25%);
 }
 
 .mobile-hmaburger{
@@ -533,7 +544,7 @@ body{
     background-color: var(--main-yello-color2);
     border-radius: 0 30px 30px 0;
     border-bottom-right-radius: 30px;
-    transition: 2s;
+    transition: 0.5s;
 }
 
 .original-almond-linebackground > p{
@@ -711,6 +722,15 @@ body{
     transition: 1s;
 }
 
+.recommend-container:hover .goto-recommend::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--brown-color);
+    transition: 2s;
+}
+
 
 .new-production{
     background-color: var(--main-blue-color);
@@ -754,17 +774,20 @@ body{
     gap: 24px;
     padding-top: 24px;
 }
+
 .recommend-name{
+    color: var(--main-white-color);
+    font-weight: 800;
     line-height: 115%;
     margin-top: 32px;
     font-size: 23px;
 }
 
 .goto-recommend{
+    display: inline-block;
     margin-top: 32px;
-    font-size: 20px;
+    font-size: 15px;
     color: var(--main-brown-color);
-    font-weight: 800;
 }
 
 .adalt-production{
@@ -1240,6 +1263,7 @@ footer{
 
 .information-text > p{
     margin-bottom: 24px;
+    font-size: 14px;
 }
 
 .footer-information-wrwapper p{
@@ -1261,6 +1285,7 @@ footer{
 
 .alert-area a {
     color: var(--footer-font-color);
+    font-size: 14px;
 }
 
 @keyframes honeybee{
@@ -1513,14 +1538,6 @@ footer{
         left: 2%;
     }
 
-    .menu a{
-        font-size: 18px;
-    }
-
-    .alert-and-navershoping:last-of-type a{
-        font-size: 15px;
-    }
-
 }
 
 @media screen and (max-width:1000px) {
@@ -1532,10 +1549,6 @@ footer{
 
     .menu-wrapper{
         gap: 25px;
-    }
-
-    .alert-and-navershoping:last-of-type a{
-        font-size: 12px;
     }
 
     .alert-button{
@@ -2001,6 +2014,33 @@ footer{
     .three-chracter figure:nth-child(3){
         width: 200px;
     }
+
+    .footer-information-wrwapper p{
+        font-size: 12px;
+    }
+
+    .alert-area a{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width : 560px) {
+    .three-chracter{
+        height: 450px;
+    }
+
+    .three-chracter figure:nth-child(1){
+        width: 150px;
+    }
+
+    .three-chracter figure:nth-child(2){
+        width: 150px;
+    }
+
+    .three-chracter figure:nth-child(3){
+        width: 150px;
+        top: 7%;
+    }
 }
 
 @media screen and (max-width : 440px) {
@@ -2035,6 +2075,14 @@ footer{
     
     .text-left{
         padding: 0px 16px;
+    }
+
+    .three-chracter figure:nth-child(2){
+        width: 120px;
+    }
+
+    .three-chracter figure:nth-child(3){
+        width: 120px;
     }
 }
 
