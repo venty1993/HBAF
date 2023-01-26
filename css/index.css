@@ -220,6 +220,18 @@ body{
     padding-top: 14px;
 }
 
+.naver{
+    background-color: var(--main-green-color);
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.naver a{
+    color: var(--main-white-color);
+}
+
 .alert-and-navershoping  li{
     flex-shrink: 0;
     font-weight: 700;
@@ -250,6 +262,7 @@ body{
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
+    color: var(--font-black);
 }
 
 
@@ -1735,12 +1748,16 @@ footer{
         justify-content: flex-end;
     }
 
-    .mobile-hmaburger a{
+    .mobile-hmaburger{
         width: 48px;
         height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 250;
     }
 
-    .mobile-hmaburger{
+    .mobile-hamburger-wrapper{
         display: block;
         width: 28px;
         height: 28px;
@@ -1749,6 +1766,7 @@ footer{
     
     .mobile-hmaburger span{
         display: block;
+        width: 100%;
         height: 2px;
         position: absolute;
         background-color: var(--main-white-color);
@@ -1757,26 +1775,28 @@ footer{
         transition: 0.5s;
     }
 
-    .mobile-menu-top{
+    .mobile-hamburger-wrapper > span:first-child{
         top: 0;
         transform: none;
     }
     
-    .mobile-menu-bottom{
+    .mobile-hamburger-wrapper > span:last-child{
         top: 100%;
         transform: translateY(-50%);
     }
     
-    .mobile-hmaburger:hover .mobile-menu-top{
+    .mobile-hmaburger.active-hamberger .mobile-menu-top{
         top: 50%;
         transform: translateY(-50%) rotate(-45deg);
+        background-color: var(--main-brown-color);
     }
     
-    .mobile-hmaburger:hover .middle{
+    .mobile-hmaburger.active-hamberger .middle{
         opacity: 0;
     }
-        
-    .mobile-hmaburger:hover .mobile-menu-bottom{ 
+    
+    .mobile-hmaburger.active-hamberger .mobile-menu-bottom{ 
+        background-color: var(--main-brown-color);
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
     }
@@ -1800,41 +1820,11 @@ footer{
         display: none;
     }
 
-    .mobile-menu-logo-wrapper{
-        display: flex;
-        justify-content: space-between;
-    }
-
     .mobile-logo{
         position: relative;
         width: 90px;
         height: 40px;
     }
-
-    /* .close-button{
-        position: relative;
-        width: 40px;
-    }
-
-    .mobile-close-top{
-        height: 2px;
-        width: 30px;
-        background-color: var(--event-gray-color);
-        rotate: 45deg;
-        transform-origin: bottom;
-        position: absolute;
-        top: 50%;
-        right: 0;
-    }
-    .mobile-close-bottm{
-        height: 2px;
-        width: 30px;
-        background-color: var(--event-gray-color);
-        rotate: -45deg;
-        position: absolute;
-        top: 50%;
-        right: 0;
-    } */
 
     .click-close{
         left: 0;

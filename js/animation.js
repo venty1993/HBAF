@@ -29,15 +29,19 @@ function orginalLinetext() {
     observer.observe(lineexplane[1]);
     observer.observe(lineexplane[2]);
     
-    const figure = document.querySelectorAll('figure')
-    observer.observe(figure[11]);
-    observer.observe(figure[12]);
-    observer.observe(figure[25]);
-    observer.observe(figure[26]);
-    observer.observe(figure[27]);
-    observer.observe(figure[28]);
- 
+    const figure = document.querySelectorAll('.recommend-container')
+    observer.observe(figure[0]);
+    observer.observe(figure[1]);
+    observer.observe(figure[2]);
+    observer.observe(figure[3]);
     
+    const choice = document.querySelectorAll('.choice-chracter-area > figure')
+    observer.observe(choice[0]);
+    observer.observe(choice[1]);
+    observer.observe(choice[2]);
+    observer.observe(choice[3]);
+    
+
     const text = document.querySelectorAll('p');
     observer.observe(text[9]);
     observer.observe(text[29]);
@@ -93,9 +97,9 @@ function backgroundcontrol() {
                 }
             })
         })
-        const div = document.querySelectorAll('div');
-        observer.observe(div[74]);
-        observer.observe(div[82]);
+        const div = document.querySelectorAll('.choice-right .choice-chracter-area');
+        observer.observe(div[0]);
+        observer.observe(div[1]);
     }
 
     function choicebackleft() {
@@ -109,9 +113,9 @@ function backgroundcontrol() {
             }
         })
     })
-    const div = document.querySelectorAll('div');
-    observer.observe(div[77]);
-    observer.observe(div[85]);
+    const div = document.querySelectorAll('.choice-left .choice-chracter-area');
+    observer.observe(div[0]);
+    observer.observe(div[1]);
 }
 
 function carrotPlay(){
@@ -139,19 +143,18 @@ function intro() {
 }
 
 
+
 function mobileMenu() {
-    
-    const hamburger = document.querySelector('.mobile-hmaburger');
+    const clickmobilebar = document.querySelector('.mobile-hmaburger');
     const mobileMenuback = document.querySelector('.mobile-hmaburger-menu');
-    const mobileClosebutton = document.querySelector('.close-button');
-    const clickbar = document.querySelectorAll('span');
-    
-    hamburger.addEventListener('click' , ()=>{
-        mobileMenuback.classList.add('click-close')
+    clickmobilebar.addEventListener('click' , ()=>{
+        
+            mobileMenuback.classList.toggle('click-close')
+            clickmobilebar.classList.toggle('active-hamberger');
+      
+        
     })
     
-    mobileClosebutton.addEventListener('click', ()=>{
-        mobileMenuback.classList.remove('click-close')
-    })
+
     
 }
