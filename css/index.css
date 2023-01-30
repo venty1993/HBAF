@@ -150,7 +150,7 @@ body{
 }
 
 .header-active{
-    height: 295px;
+    height: 315px;
     background-color: var(--main-yello-color2);
 }
 
@@ -320,18 +320,17 @@ body{
 .header-letter{
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: var(--main-white-color);
     font-size: 70px;
     font-weight: bold;
     display: block;
+    text-align: center;
 }
 
 .navi-honey{
     width: 220px;
     position: absolute;
-    top: 94px;
+    top: 113px;
     left: 10%;
 }
 
@@ -582,7 +581,7 @@ body{
     flex-basis: 60%;
     max-width: 640px;
     transform: translateX(-5%);
-    padding-top: 64px;
+    padding-bottom: 24px;
 }
 
 .line{
@@ -653,7 +652,7 @@ body{
 }
 
 .ori-and-moreview-wrapper{
-    padding: 24px 64px;
+    padding: 64px;
 }
 
 #recommend-area{
@@ -1724,8 +1723,30 @@ footer{
         font-size: 40px;
     }
 
+    .choice-content-wrapper{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    
+    .coice-contents{
+        gap: 60px;
+    }
+    
+    .choice-right{
+        justify-content: flex-start;
+    }
+
+    .choice-left{
+        justify-content: end;
+    }
+
+    .explane-character > .mobile-ver{
+        display: block;
+    } 
+
     .almond{
-        width: 260px;
+        width: 100%;
     }
 
     .chrancter-name{
@@ -1750,7 +1771,32 @@ footer{
         width: 140px;
         height: 60px;
     }
+    
 
+
+}
+
+@media screen and (max-width : 710px) {
+    .header-wrapper{
+        justify-content: flex-end;
+    }
+
+    .choice-content-wrapper{
+        max-width: 625px;
+        margin: 0 auto;
+    }
+/* 
+    .coice-contents{
+        gap: 60px;
+    }
+    
+    .choice-right{
+        justify-content: flex-start;
+    }
+
+    .choice-left{
+        justify-content: end;
+    } */
 }
 
 @media screen and (max-width : 660px) {
@@ -1953,6 +1999,10 @@ footer{
         flex-flow: column-reverse;
     }
 
+    .almond{
+        width: 250px;
+    }
+
     .event-area-wrapper > h2{
         font-size: 60px;
     }
@@ -2046,6 +2096,19 @@ footer{
     .three-chracter figure:nth-child(3){
         width: 150px;
         top: 7%;
+    }
+
+    .explane-letter-wrapper > .mobile-hide{
+        text-decoration-thickness: 2px;
+        text-underline-position: under;
+        text-underline-offset: 4px;
+        line-height: 36px;
+        border-bottom: 2px solid var(--main-brown-color);
+        margin-top: 0px;
+    }
+
+    .explane-letter-wrapper > p::after{
+        display: none;
     }
 }
 
